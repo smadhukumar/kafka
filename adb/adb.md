@@ -147,7 +147,7 @@ This workshop requires a certain number of ports to be available, a requirement 
 | 80             | GGMA Console (http)                   |
 | 443            | GGMA Console (https)                  |
 | 6080           | noVNC Remote Desktop                  |
-
+| 9092           | kafka Bootstrap Server                  |
 1.  Go to *Networking >> Virtual Cloud Networks*
 2.  Choose your network
 3.  Under Resources, select Security Lists
