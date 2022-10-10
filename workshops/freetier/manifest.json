@@ -15,8 +15,8 @@
         {
 
             "title": "Lab 1: Set Up the Environment",
-            "description": "Provision Autonomous Databases to use as the source and target.",
-            "filename": "../../adb/adb.md"
+            "description": "Provision Autonomous Databases to use as the source and target as kafka.",
+            "filename": "../../environment-setup/environment-setup.md"
         },
         {
             "title": "Lab 2: Create the Oracle Cloud Infrastructure GoldenGate Deployment for Source",
