@@ -52,7 +52,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 	<copy>
 	git clone https://github.com/smadhukumar/atp-to-kafka.git
 
-	cd migrate_to_atp
+	cd atp-to-kafka
 	</copy>
 	```
 
@@ -119,9 +119,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	```
 	<copy>
-	chmod +x update.sh
-	
-	terraform init
+		terraform init
 	</copy>
 	```
 
@@ -154,7 +152,7 @@ Depending on the quota limit you have in your tenancy you can choose from any VM
 This lab uses the following compute types but not limited to:
 
 
-- Virtual Machine for Apache Kafka - **VM.Standard2.1** or more
+- Virtual Machine for Apache Kafka - **VM.Standard.E2.2** or more
 
 
 #### Fix for Issue #1
@@ -163,7 +161,7 @@ This lab uses the following compute types but not limited to:
 2. Select Compute
 3. Click Scope to change Availability Domain
 4. Look for "Standard2 based VM" and "Standard.E4.Flex based VM", then check **Available** column numbers and sum  them up. All you need to have is at least **3** or more. If you have found correct available capacity, please continue to the next step.
-5. Go to `migrate_to_atp` folder in your cloud-shell and modify variables file with: **`vi vars.tf`**
+5. Go to `atp-to-kafka` folder in your cloud-shell and modify variables file with: **`vi vars.tf`**
 
 	![Troubleshooting service limits exceeded.](images/fix-1.png)
 

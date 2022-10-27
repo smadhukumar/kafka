@@ -49,7 +49,6 @@ This lab assumes that you completed all preceding labs.
     ![Replicaiton creation completes](images/click-and-run.png " ")
 
 
-
 In this lab, you created a replicat for OCI GoldenGate  Deployment.
 
 ## Learn More
