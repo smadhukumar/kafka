@@ -68,55 +68,27 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 8.  Click **Run Script**. The Script Output tab displays confirmation messages.
 
 
+## Task 3: Log in to the Oracle GoldenGate BigData Deployment Console
+
+1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
+
+2.  On the Deployments page, select **GGBD DEPLOYMENT**.
+
+3.  On the Deployment Details page, click **Launch Console**.
+
+    ![Deployment GGBD  Details page](images/01-03-ggbd-launchconsole.png " ")
+
+4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+
+    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
+
+    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
+
+5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab
+
+    ![OCI ggbd-statistics](images/ggbd-statistics.png " ")
 
 
-## Task 3: Add Transaction Data and a Checkpoint Table
-
-> **Note:** *Ensure that you enable supplemental logging before adding an Extract or you may encounter errors. If you encounter errors, delete and add the Extract before trying again.*
-
-1.  Open the navigation menu and then click **Configuration**.
-
-    ![Administration Service navigation menu](images/02-01-nav-config.png " ")
-
-2.  Click **Connect to database SourceATP**.
-
-    ![Credentials list with Connect to database SourceATP highlighted](images/02-02-connect-source.png " ")
-
-3.  Next to **TRANDATA Information** click **Add TRANDATA**.
-
-    ![Add TRANDATA](images/02-03-trandata.png " ")
-
-4.  For **Schema Name**, enter **SRC\_OCIGGLL**, and then click **Submit**.
-
-    ![Schema Name field populated with SRC_OCIGGLL](images/02-04-schema-name.png " ")
-
-5.  To verify, click **Search TRANDATA**, and then enter **SRC\_OCIGGLL** into the Search field and click **Search**.
-
-    ![Search icon highlighted](images/02-05-search.png " ")
-
-    ![SRC_OCIGGLL entered in search field and search results returned](images/01-05-trandata.png " ")
-
-6.  Click **Connect to database SourceADW**.
-
-    ![Credentials list with Connect to database SourceADW highlighted](images/02-06.png " ")
-
-7.  Next to Checkpoint, click **Add Checkpoint**.
-
-    ![Add Checkpoint highlighted](images/02-06-add-checkpoint.png " ")
-
-8.  For **Checkpoint Table**, enter **"SRCMIRROR\_OCIGGLL"."CHECKTABLE"**, and then click **Submit**.
-
-    ![Populated Checkpoint table field and submit button highlighted](images/02-07-checktable.png " ")
-
-To return to the GoldenGate Deployment Console Home page, click **Overview** in the left navigation.
-
-
-
-
-
-## Learn more
-
-* [ADD TRANDATA](https://docs.oracle.com/en/middleware/goldengate/core/21.3/gclir/add-trandata.html)
 
 
 ## Acknowledgements
