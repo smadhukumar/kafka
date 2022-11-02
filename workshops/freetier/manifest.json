@@ -31,16 +31,24 @@
             "filename": "../../connections/connections.md"
         },
         {
-            "title": "Lab 5: Create and run the Extract",
-            "filename": "../../extracts-replicats/extracts-replicats.md"
+            "title": "Lab 5: Add Trandata",
+            "filename": "../../trandata/trandata.md"
+        },
+		{
+            "title": "Lab 6: Create and run the Extract",
+            "filename": "../../extract/extract.md"
         },
         {
-            "title": "Lab 6: Create and run the Distribution Path",
+            "title": "Lab 7: Create and run the Distribution Path",
             "filename": "../../path/path.md"
         },
         {
-            "title": "Lab 7: Create and run the Replicat",
+            "title": "Lab 8: Create and run the Replicat",
             "filename": "../../replicat/replicat.md"
+        },
+        {
+            "title": "Lab 9: Load data to ATP",
+            "filename": "../../load/load.md"
         },
         {
             "title": "Need Help?",
