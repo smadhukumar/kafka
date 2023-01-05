@@ -108,6 +108,8 @@ In this first lab, we will prepare our work environment and create our lab resou
 	tenancy_ocid  = "replace_your_tenancy_value_here"
 	region = "replace-your-region-value here"
 	compartment_ocid = "replace-your-tenancy-value_here"
+	fingerprint="replace-your-fingerprint-value"
+	user_ocid="replace-your-user-ocid-value"
 	</copy>
 	```
 
