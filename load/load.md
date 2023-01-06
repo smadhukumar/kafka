@@ -120,9 +120,6 @@ commit;
 
     ![OCI ggbd-statistics](images/ggbd-statistics.png " ")
 
-
-
-
 ## Acknowledgements
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
 * **Contributors** -  Deniz Sendil, Database Product Management
