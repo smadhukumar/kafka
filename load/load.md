@@ -73,6 +73,7 @@ Insert into SRC_OCIGGLL.SRC_CUSTOMER values (102,0,'McCarthy','Robin','27 Pasade
 Insert into SRC_OCIGGLL.SRC_CUSTOMER values (103,0,'Travis','Peter','7835 Hartford Drive',12,'(510) 555 4448',34,12);
 Insert into SRC_OCIGGLL.SRC_CUSTOMER values (104,0,'Larson','Joe','87 Carmel Blvd.',13,'(213) 555 5095',45,13);
 Insert into SRC_OCIGGLL.SRC_CUSTOMER values (105,0,'Goldschmidt','Tony','91 Torre drive',14,'(619) 555 6529',55,20);
+commit;
 
 </copy>
     ```
