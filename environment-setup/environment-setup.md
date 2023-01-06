@@ -175,5 +175,5 @@ However, if you are unable to resolve it using above fix, please skip to the **N
 ## Acknowledgements
 
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
-* **Contributors** -  Deniz Sendil, Database Product Management
+* **Contributors** -  Deniz Sendil, Database Product Management ;Divya Kashyap DevOps and Infra Cloud Engineer, Bangalore, NAC
 * **Last Updated By/Date** - 
