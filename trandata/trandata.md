@@ -21,7 +21,139 @@ In this lab, you will:
 
 This lab assumes that you completed all preceding labs, and your deployment is in the Active state.
 
-## Task 1: Log in to the Oracle GoldenGate Deployment Console
+
+## Task 1: Create a source ATP schema
+
+1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
+
+    ![Select your Autonomous Database instance](./images/02-03-atp.png " ")
+
+2.  Click **Open DB Actions**.
+
+3.  Log in with the ADMIN user and password provided when you created the ATP instance.
+
+    ![DB Actions log in page](./images/02-05-login.png " ")
+
+4.  From the Database Actions menu, under **Development**, select **SQL**.
+
+    ![Database Actions page](./images/02-06-db-actions.png " ")
+
+5.  (Optional) Click **X** to close the Help dialog.
+
+6.  Copy  the SQL script and paste into the SQL Worksheet.
+
+    ```
+    <copy>
+    CREATE USER "SRC_OCIGGLL" IDENTIFIED BY "#OCIGGSr0ck5*";
+    GRANT CREATE SESSION TO "SRC_OCIGGLL";
+    ALTER USER "SRC_OCIGGLL" ACCOUNT UNLOCK;
+    GRANT CONNECT, RESOURCE, DWROLE  TO "SRC_OCIGGLL";
+    GRANT UNLIMITED TABLESPACE TO "SRC_OCIGGLL";
+    BEGIN
+        ORDS.ENABLE_SCHEMA(p_enabled => TRUE,
+                        p_schema => 'SRC_OCIGGLL',
+                        p_url_mapping_type => 'BASE_PATH',
+                        p_url_mapping_pattern => 'SRC_OCIGGLL',
+                        p_auto_rest_auth => FALSE);
+        commit;
+    END;
+    /
+    exit;
+
+    </copy>
+    ```
+
+    ![Pasted script in SQL Worksheet](./images/02-08-atp-sql.png " ")
+
+9.  Click **Run Script**. The Script Output tab displays confirmation messages.
+
+10. Copy  the SQL script and paste into the SQL Worksheet.
+    ```
+    <copy>
+--------------------------------------------------------
+    --  DDL for Table SRC_CITY
+    --------------------------------------------------------
+    CREATE TABLE "SRC_OCIGGLL"."SRC_CITY" 
+    (   "CITY_ID" NUMBER(10,0), 
+        "CITY" VARCHAR2(50 BYTE), 
+        "REGION_ID" NUMBER(10,0), 
+        "POPULATION" NUMBER(10,0)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_CUSTOMER
+    --------------------------------------------------------
+    CREATE TABLE "SRC_OCIGGLL"."SRC_CUSTOMER" 
+    (	"CUSTID" NUMBER(10,0), 
+        "DEAR" NUMBER(1,0), 
+        "LAST_NAME" VARCHAR2(50 BYTE), 
+        "FIRST_NAME" VARCHAR2(50 BYTE), 
+        "ADDRESS" VARCHAR2(100 BYTE), 
+        "CITY_ID" NUMBER(10,0), 
+        "PHONE" VARCHAR2(50 BYTE), 
+        "AGE" NUMBER(3,0), 
+        "SALES_PERS_ID" NUMBER(10,0)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_ORDERS
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_ORDERS" 
+    (   "ORDER_ID" NUMBER(10,0), 
+        "STATUS" VARCHAR2(3 BYTE), 
+        "CUST_ID" NUMBER(10,0), 
+        "ORDER_DATE" DATE, 
+        "CUSTOMER" VARCHAR2(35 BYTE)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_ORDER_LINES
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_ORDER_LINES" 
+    (   "ORDER_ID" NUMBER(10,0), 
+        "LORDER_ID" NUMBER(10,0), 
+        "PRODUCT_ID" NUMBER(10,0), 
+        "QTY" NUMBER(10,0), 
+        "AMOUNT" NUMBER(10,2)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_PRODUCT
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_PRODUCT" 
+    (   "PRODUCT_ID" NUMBER(10,0), 
+        "PRODUCT" VARCHAR2(50 BYTE), 
+        "PRICE" NUMBER(10,2), 
+        "FAMILY_NAME" VARCHAR2(50 BYTE)
+    );
+    -------------------------------------------------------
+     --  DDL for Table SRC_REGION
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_REGION" 
+    (   "REGION_ID" NUMBER(10,0), 
+        "REGION" VARCHAR2(50 BYTE), 
+        "COUNTRY_ID" NUMBER(10,0), 
+        "COUNTRY" VARCHAR2(50 BYTE)
+    ) ;
+    </copy>
+    ```
+    ![Pasted schema script in SQL Worksheet](./images/02-10-atp-schema.png " ")
+
+11. Click **Run Script**. The Script Output tab displays confirmation messages.
+
+	>**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
+
+12. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
+
+    ![Displays the SRC\_OCIGGLL tables](./images/02-11-verify.png " ")
+
+13. To enable supplemental logging, run the following command:
+
+    ```
+    <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
+    ```
+
+## Task 2: Add trandata 
 
 1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
 
@@ -36,56 +168,6 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
 
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
-
-## Task 2: Create a source ATP schema
-
-1.  Click the following link to download the database schema.
-
-    [Archive.zip](./files/Archive.zip)
-
-2.  Save `Archive.zip` to a download directory, and then unzip the file.
-
-3.  Back in the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
-
-    ![Select your Autonomous Database instance](./images/02-03-atp.png " ")
-
-4.  Click **Open DB Actions**.
-
-5.  Log in with the ADMIN user and password provided when you created the ATP instance.
-
-    ![DB Actions log in page](./images/02-05-login.png " ")
-
-6.  From the Database Actions menu, under **Development**, select **SQL**.
-
-    ![Database Actions page](./images/02-06-db-actions.png " ")
-
-7.  (Optional) Click **X** to close the Help dialog.
-
-8.  Copy and paste the SQL script from **OCIGGLL\_OCIGGS\_SETUP\_USERS\_ATP.sql** into the SQL Worksheet.
-
-    ![Pasted script in SQL Worksheet](./images/02-08-atp-sql.png " ")
-
-9.  Click **Run Script**. The Script Output tab displays confirmation messages.
-
-10. Copy and paste the SQL script from **OCIGGLL\_OCIGGS\_SRC\_USER\_TABLE\_DDL.sql** a new SQL Worksheet.
-
-    ![Pasted schema script in SQL Worksheet](./images/02-10-atp-schema.png " ")
-
-11. Click **Run Script**. The Script Output tab displays confirmation messages.
-
-	>**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
-
-12. In the Navigator tab, look for the SRC\_OCIGGLL schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate SRC\_OCIGGLL.
-
-    ![Displays the SRC\_OCIGGLL tables](./images/02-11-verify.png " ")
-
-13. To enable supplemental logging, run the following command:
-
-    ```
-    <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
-    ```
-
-## Task 3: Add Transaction Data and a Checkpoint Table
 
 > **Note:** *Ensure that you enable supplemental logging before adding an Extract or you may encounter errors. If you encounter errors, delete and add the Extract before trying again.*
 
@@ -115,19 +197,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
     ![Credentials list with Connect to database SourceADW highlighted](images/02-06.png " ")
 
-7.  Next to Checkpoint, click **Add Checkpoint**.
-
-    ![Add Checkpoint highlighted](images/02-06-add-checkpoint.png " ")
-
-8.  For **Checkpoint Table**, enter **"SRCMIRROR\_OCIGGLL"."CHECKTABLE"**, and then click **Submit**.
-
-    ![Populated Checkpoint table field and submit button highlighted](images/02-07-checktable.png " ")
-
 To return to the GoldenGate Deployment Console Home page, click **Overview** in the left navigation.
-
-
-
-
 
 ## Learn more
 
