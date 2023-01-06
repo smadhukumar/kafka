@@ -34,37 +34,35 @@ This lab assumes that you completed all preceding labs.
 
     ![GoldenGate Overview page](images/01-02-ggs-overview.png " ")
 
-3.  You may need to select a compartment. Under List Scope, from the Comparment dropdown, expand the root compartment, and then select the compartment associated with your username. For example, if your LiveLab username is LL1234-user, expand root, and then select the compartment **LL1234-COMPARTMENT**.
-
-4.  On the Deployments page, click **Create Deployment**.
+3.  On the Deployments page, click **Create Deployment**.
 
     ![Deployments page](images/01-02-01.png "")
 
-5.  In the Create Deployment panel, enter **GGSDeployment** for Name.
+4.  In the Create Deployment panel, enter **GGSDeployment** for Name.
 
-6.  From the Compartment dropdown, select a compartment.
+5.  From the Compartment dropdown, select a compartment.
 
-7.  For OCPU Count, enter **1**.
+6.  For OCPU Count, enter **1**.
 
-8.  For Subnet, select a subnet. If you're using the workshop environment, select **&lt;user&gt;pubsubnt**.
+7.  For Subnet, select a subnet. If you're using the workshop environment, select **&lt;user&gt;pubsubnt**.
 
-9.  For License type, select **Bring You Own License (BYOL)**.
+8.  For License type, select **Bring You Own License (BYOL)**.
 
-10. Click **Show Advanced Options**, and then select **Create Public Endpoint**.
+9. Click **Show Advanced Options**, and then select **Create Public Endpoint**.
 
     ![Completed Create GoldenGate Deployment fields](images/01-09.png " ")
 
-11. Click **Next**.
+10. Click **Next**.
 
-12. For GoldenGate Instance Name, enter **ggsinstance**.
+11. For GoldenGate Instance Name, enter **ggsinstance**.
 
-13. For Administrator Username, enter **oggadmin**.
+12. For Administrator Username, enter **oggadmin**.
 
-14. For Administrator Password, enter a password. Take note of this password.
+13. For Administrator Password, enter a password. Take note of this password.
 
 >**Note:** This password needs to match password of a database user that we will use later. In order to make sure the password works for both, we suggest you enter a password containing only upper case letters, lower case letters, numbers, and underscores. If you are using the green button (run on LiveLabs tenancy), you can use your database admin password given to you on the reservation page.
 
-15. Click **Create**.
+14. Click **Create**.
 
     ![Completed GoldenGate details](images/02-13.png " ")
 

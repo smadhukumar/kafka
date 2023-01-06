@@ -34,37 +34,35 @@ This lab assumes that you completed all preceding labs.
 
     ![GoldenGate Overview page](images/01-02-ggs-overview.png " ")
 
-3.  You may need to select a compartment. Under List Scope, from the Comparment dropdown, expand the root compartment, and then select the compartment associated with your username. For example, if your LiveLab username is LL1234-user, expand root, and then select the compartment **LL1234-COMPARTMENT**.
-
-4.  On the Deployments page, click **Create Deployment**.
+3.  On the Deployments page, click **Create Deployment**.
 
     ![Deployments page](images/01-02-ggs-overview.png "")
 
-5.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
+4.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
 
-6.  From the Compartment dropdown, select a compartment.
+5.  From the Compartment dropdown, select a compartment.
 
-7.  For OCPU Count, enter **1**.
+6.  For OCPU Count, enter **1**.
 
-8.  For Subnet, select a subnet. If you're using the workshop environment, select **&lt;user&gt;pubsubnt**.
+7.  For Subnet, select a subnet. If you're using the workshop environment, select **&lt;user&gt;pubsubnt**.
 
-9.  For License type, select **License included**.
+8.  For License type, select **License included**.
 
 
-10. Click **Next**.
+9. Click **Next**.
     ![Completed GoldenGate details](images/01-02-01.png " ")
 
-11. Select Technology as  **Big Data**.
+10. Select Technology as  **Big Data**.
 
-12. For GoldenGate Instance Name, enter **OCIGG_Big_Data**.
+11. For GoldenGate Instance Name, enter **OCIGG_Big_Data**.
 
-13. For Administrator Username, enter **oggadmin**.
+12. For Administrator Username, enter **oggadmin**.
 
-14. For Administrator Password, enter a password. Take note of this password.
+13. For Administrator Password, enter a password. Take note of this password.
 
 >**Note:** This password needs to match password of a database user that we will use later. In order to make sure the password works for both, we suggest you enter a password containing only upper case letters, lower case letters, numbers, and underscores. If you are using the green button (run on LiveLabs tenancy), you can use your database admin password given to you on the reservation page.
 
-15. Click **Create**.
+14. Click **Create**.
 
     ![Completed GoldenGate details](images/02-13.png " ")
 
@@ -103,6 +101,6 @@ In this lab, you created an OCI Deployment, reviewed its Deployment details, and
 * [Managing Deployments](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/deployments.html)
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, AppDev and Integration, Bangalore Tech Teame
-* **Contributors** -  Deniz Sendil, Database Product Management; Jenny Chan, Consulting User Assistance Developer
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
+* **Contributors** -  Deniz Sendil, Database Product Management
 * **Last Updated By/Date** - 

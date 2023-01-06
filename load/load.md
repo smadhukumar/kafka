@@ -21,25 +21,7 @@ In this lab, you will:
 
 This lab assumes that you completed all preceding labs, and your deployment is in the Active state.
 
-## Task 1: Log in to the Oracle GoldenGate Deployment Console
-
-1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
-
-2.  On the Deployments page, select **GGSDeployment**.
-
-3.  On the Deployment Details page, click **Launch Console**.
-
-    ![Deployment Details page](images/01-03-ggs-launchconsole.png " ")
-
-4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
-
-    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
-
-    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
-
-5. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab
-
-## Task 2: Load a data to source ATP schema
+## Task 1: Load a data to source ATP schema
 
 1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
 
@@ -98,7 +80,24 @@ Insert into SRC_OCIGGLL.SRC_CUSTOMER values (105,0,'Goldschmidt','Tony','91 Torr
 
 8.  Click **Run Script**. The Script Output tab displays confirmation messages.
 
+## Task 2: Log in to the Oracle GoldenGate Deployment Console
 
+1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
+
+2.  On the Deployments page, select **GGSDeployment**.
+
+3.  On the Deployment Details page, click **Launch Console**.
+
+    ![Deployment Details page](images/01-03-ggs-launchconsole.png " ")
+
+4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+
+    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
+
+    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
+
+5. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
+ ![OCI ggs-statistics](images/ggs-statistics.png " ")
 
 ## Task 3: Log in to the Oracle GoldenGate BigData Deployment Console
 
@@ -116,7 +115,7 @@ Insert into SRC_OCIGGLL.SRC_CUSTOMER values (105,0,'Goldschmidt','Tony','91 Torr
 
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
 
-5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab
+5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
 
     ![OCI ggbd-statistics](images/ggbd-statistics.png " ")
 
@@ -124,6 +123,6 @@ Insert into SRC_OCIGGLL.SRC_CUSTOMER values (105,0,'Goldschmidt','Tony','91 Torr
 
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, AppDev and Integration, Bangalore Tech Teame
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
 * **Contributors** -  Deniz Sendil, Database Product Management
 * **Last Updated By/Date** - 

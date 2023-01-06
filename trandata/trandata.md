@@ -205,6 +205,6 @@ To return to the GoldenGate Deployment Console Home page, click **Overview** in 
 
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, AppDev and Integration, Bangalore Tech Teame
-* **Contributors** -  Deniz Sendil, Database Product Management; Jenny Chan, Consulting User Assistance Developer
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
+* **Contributors** -  Deniz Sendil, Database Product Management
 * **Last Updated By/Date** - 

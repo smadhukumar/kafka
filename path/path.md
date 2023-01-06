@@ -91,7 +91,7 @@ In this lab, you created a distribution path from source OCI GoldenGate Deployme
 * [Managing Deployments](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/deployments.html)
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, AppDev and Integration, Bangalore Tech Teame
-* **Contributors** -  Deniz Sendil, Database Product Management; Jenny Chan, Consulting User Assistance Developer
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
+* **Contributors** -  Deniz Sendil, Database Product Management
 * **Last Updated By/Date** - 
 

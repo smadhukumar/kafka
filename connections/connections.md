@@ -87,6 +87,6 @@ In this lab, you created a connection to source ATP and target Apache Kafka.
 * [Manage Deployment users](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/manage-user-accounts.html#GUID-56E2E146-7713-4094-8BEC-7C138064EB21)
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, AppDev and Integration, Bangalore Tech Teame
-* **Contributors** -  Deniz Sendil, Database Product Management; Jenny Chan, Consulting User Assistance Developer
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
+* **Contributors** -  Deniz Sendil, Database Product Management
 * **Last Updated By/Date** - 
