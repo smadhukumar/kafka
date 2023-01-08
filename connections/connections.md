@@ -31,14 +31,14 @@ First, follow the steps below to create a connection to the source Oracle Autono
 
 2.  On the GoldenGate **Connections** page, click **Create connection**.
 
-    ![GoldenGate create-connection page](images/create-connection.png " ")
+    ![GoldenGate create-connection page](images/connection-select.png " ")
 
 3.  In the Create connection panel, enter **ATP_Source** for Name.
 
 4.  From the Compartment dropdown menu, select a compartment (in this lab,we choose compartment as **GDemo**).
 
 5.  Select Type as **OCI Autonomous Database** and click Next.
-    ![GoldenGate create connection creation page](images/create-connection-general-info.png " ")
+    ![GoldenGate create connection creation page](images/oci-connection-choose.png " ")
 
 6.  On the Create connection **Connection details** page,choose the radio button **Select Database** to select the ATP Database that was created in Lab 1. Provide Database username,password and click Create.
     ![atp database connection created](images/create-atp-connection.png " ")
@@ -55,17 +55,17 @@ Follow the steps below to create a connection to the target  Apache Kafka.
 
 2.  On the GoldenGate **Connections** page, click **Create connection**.
 
-    ![GoldenGate create-connection page](images/create-connection.png " ")
+    ![GoldenGate create-connection page](images/connection-select.png " ")
 
 3.  In the Create connection panel, enter **Kafka** for Name.
 
 4.  From the Compartment dropdown menu, select a compartment (in this lab,we choose compartment as **GDemo**).
 
 5.  Select Type as **Apache Kafka** and click Next.
-    ![Connection type selected as Apache Kafka](images/create-connection-apache-kafka.png " ")
+    ![Connection type selected as Apache Kafka](images/kafka-connection-choose.png " ")
 
 6.  On the Create connection **Connection details** page,provide public ip of Boothstrap servers of Kafka OCI Instance that was configured in Lab 1 for **Host**. Port as **9092**. Select Security Protocol as **Plaintext** and click Create.
-    ![public ip of boothstrap server](images/boothstrap-server.png " ")
+    ![public ip of boothstrap server](images/bootstrap-server-details.png " ")
 
 ## Task 3: Assign Connections to Deployments
 1. Go to Connections and click on **ATP_Connection** that was created in ***Task 1***. Click ***Assign Deployment***.

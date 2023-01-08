@@ -30,13 +30,9 @@ This lab assumes that you completed all preceding labs.
 
     ![GoldenGate in Oracle Cloud navigation menu](images/database-goldengate.png " ")
 
-2.  On the GoldenGate **Overview** page, click **Deployments**.
+2.  On the GoldenGate **Overview** page, click **Create Deployment**.
 
-    ![GoldenGate Overview page](images/01-02-ggs-overview.png " ")
-
-3.  On the Deployments page, click **Create Deployment**.
-
-    ![Deployments page](images/01-02-ggs-overview.png "")
+    ![Deployments page](images/create-deployment-select.png "")
 
 4.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
 
@@ -47,14 +43,15 @@ This lab assumes that you completed all preceding labs.
 7.  For Subnet, select a subnet. If you're using the workshop environment, select **&lt;user&gt;pubsubnt**.
 
 8.  For License type, select **License included**.
+9.  Click **Show Advanced Options**, and then select **Create Public Endpoint**.
 
 
 9. Click **Next**.
-    ![Completed GoldenGate details](images/01-02-01.png " ")
+    ![Completed GoldenGate details](images/create-deployment-click.png " ")
 
 10. Select Technology as  **Big Data**.
 
-11. For GoldenGate Instance Name, enter **OCIGG_Big_Data**.
+11. For GoldenGate Instance Name, enter **OCIGGBigData**.
 
 12. For Administrator Username, enter **oggadmin**.
 
@@ -64,7 +61,7 @@ This lab assumes that you completed all preceding labs.
 
 14. Click **Create**.
 
-    ![Completed GoldenGate details](images/02-13.png " ")
+    ![Completed GoldenGate details](images/create-deployment-create.png " ")
 
 You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.
 
@@ -80,17 +77,18 @@ On the Deployment Details page, you can:
 * Review the deployment resource information
 * Add tags
 
-    ![Deployment Details page](images/02-01-deployment-details.png " ")
+    ![Deployment Details page](images/deployment-active-page-1.png " ")
+    ![Deployment Details page](images/deployment-active-page-2.png " ")
 
 ## Task 3: Launch the GoldenGate Deployment Console
 
 1. When the deployment is active, click **Launch Console**.
 
-    ![Launch Console](images/03-01.png " ")
+    ![Launch Console](images/deployment-lanuch.png " ")
 
 2. To log in to the GoldenGate deployment console, enter **oggadmin** for User Name and the password you provided above, and then click **Sign In**.
 
-    ![GoldenGate Deployment Console](images/02-02.png " ")
+    ![GoldenGate Deployment Console](images/ggs-deploymentconsole-signin.png " ")
 
 After you log in, you're brought to the GoldenGate deployment console home page. Here, you can access the GoldenGate Administration, Performance Metrics, Distribution, and Receiver Services, as well as add Extracts and Replicats for your data replication tasks.
 
