@@ -24,27 +24,27 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1.  On the GoldenGate Deployment Console Home page, click **Add Extract** (plus icon).
 
-    ![Click Add Extract](images/02-02-ggs-add-extract.png " ")
+    ![Click Add Extract](images/add-extract.png " ")
 
 2.  On the Add Extract page, select **Integrated Extract**, and then click **Next**.
 
-    ![Add Extract page with Integrated Extract highlighted](images/03-02.png " ")
+    ![Add Extract page with Integrated Extract highlighted](images/select-integratre-extract.png " ")
 
 3.  For **Process Name**, enter UAEXT.
 
 4.  For **Trail Name**, enter E1.
 
-    ![Add Extract - Basic Information](images/02-04-ggs-basic-info.png " ")
+    ![Add Extract - Basic Information](images/extract-name.png " ")
 
 5.  Under **Source Database Credential**, for **Credential Domain**, select **OracleGoldenGate**.
 
 6.  For **Credential Alias**, select the **SourceATP**.
 
-    ![Add Extract - Source Database Credential](images/02-04-ggs-src-db-credential.png " ")
+    ![Add Extract - Source Database Credential](images/credential-store-select.png " ")
 
 7.  Under Managed Options, enable **Critical to deployment health**.
 
-    ![Critical to deployment health highlighted](images/03-07.png " ")
+    ![Critical to deployment health highlighted](images/critical-to-deployment-health.png " ")
 
 8.  Click **Next**.
 
@@ -74,7 +74,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     table SRC_OCIGGLL.*;</copy>
     ```
 
-    ![](images/03-09-params.png " ")
+    ![extract create and run](images/extract-create-and-run.png " ")
 
 10. Click **Create**. You're returned to the OCI GoldenGate Deployment Console Home page.
 

@@ -77,9 +77,9 @@ Follow the steps below to create a connection to the target  Apache Kafka.
 
 3.	Go back to **Connections** and click on **Kafka Connection** that was created in the ***Task 2***
 
-    ![kafka-connection](images/kafka-connection.png " ")
+    ![kafka-connection](images/assign-kafka-connection.png " ")
 4.	Select OCI GoldenGate for Big Data deployment as ***OCIGG_BigData***  and click Assign Deployment.
-    ![assign-kafka-connection](images/assign-kafka-connection.png " ")
+    ![assign-kafka-connection](images/kafka-connection.png " ")
 In this lab, you created a connection to source ATP and target Apache Kafka.
 
 ## Learn More

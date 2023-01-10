@@ -58,7 +58,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
         commit;
     END;
     /
-    exit;
+   
 
     </copy>
     ```
@@ -161,7 +161,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 3.  On the Deployment Details page, click **Launch Console**.
 
-    ![Deployment Details page](images/01-03-ggs-launchconsole.png " ")
+    ![Deployment Details page](images/ggs-launch-oracle.png " ")
 
 4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
 
@@ -173,29 +173,26 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1.  Open the navigation menu and then click **Configuration**.
 
-    ![Administration Service navigation menu](images/02-01-nav-config.png " ")
+    ![Administration Service navigation menu](images/navigation-menu.png " ")
 
 2.  Click **Connect to database SourceATP**.
 
-    ![Credentials list with Connect to database SourceATP highlighted](images/02-02-connect-source.png " ")
+    ![Credentials list with Connect to database SourceATP highlighted](images/source-connect.png " ")
 
 3.  Next to **TRANDATA Information** click **Add TRANDATA**.
 
-    ![Add TRANDATA](images/02-03-trandata.png " ")
+    ![Add TRANDATA](images/add-trandata.png " ")
 
 4.  For **Schema Name**, enter **SRC\_OCIGGLL**, and then click **Submit**.
 
-    ![Schema Name field populated with SRC_OCIGGLL](images/02-04-schema-name.png " ")
+    ![Schema Name field populated with SRC_OCIGGLL](images/schema-trandata.png " ")
 
 5.  To verify, click **Search TRANDATA**, and then enter **SRC\_OCIGGLL** into the Search field and click **Search**.
 
-    ![Search icon highlighted](images/02-05-search.png " ")
+    ![Search icon highlighted](images/search-schema-trandata.png " ")
 
-    ![SRC_OCIGGLL entered in search field and search results returned](images/01-05-trandata.png " ")
+    ![SRC_OCIGGLL entered in search field and search results returned](images/search-schema-trandata-result.png " ")
 
-6.  Click **Connect to database SourceADW**.
-
-    ![Credentials list with Connect to database SourceADW highlighted](images/02-06.png " ")
 
 To return to the GoldenGate Deployment Console Home page, click **Overview** in the left navigation.
 
