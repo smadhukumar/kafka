@@ -42,12 +42,12 @@ This lab assumes that you completed all preceding labs.
 
     ![Basic Information](images/basic-info.png " ")
 11.	Review the mappings and click **“Next”**.
-    ![Basic Mapping](images/mapping.png " ")
+    ![Basic Mapping](images/replicat-table-mapping.png " ")
 12. In “Properties File”, provide **topic mapping template** as “***${FullyQualifiedTableName}***”. Click **“Crate & Run”**.  
 
 
     ![Replicaiton creation completes](images/click-and-run.png " ")
-
+    ![Replicaiton creation completes](images/replicat-green-status.png" ")
 
 In this lab, you created a replicat for OCI GoldenGate  Deployment.
 

@@ -48,7 +48,7 @@ This lab assumes that you completed all preceding labs.
 4. For **User ID**, enter ***DistUser***
 5. For **Password**, enter the password which is created at ***Task 1: Add New User Step 5***.
 6. For **Verify Password**, Kindly re-enter the above password and click ***submit***
-    ![Add a New user submit](images/add-credential-submit.png " ")
+    ![Add a New user submit](images/distribution-credential-add-at-source.png " ")
 
 
 ## Task 3: Add Path
@@ -56,12 +56,13 @@ This lab assumes that you completed all preceding labs.
 
 1. Go to Distibution Service of source OCI GoldenGate Deployment and click on ***'+' (plus icon: Add Path)*** to add a new path.
 
-    ![Add a New Path](images/add-path.png " ")
+    ![Add a New Path](images/add-path-home.png " ")
 
 2. On Add Path page,for **Path Name**, enter ***Dist_Path***.
 3. For **Source**, Select the Extract created
 4. For **Trail Name**, Select the trail fine name
 5. For **Generated Source UR**I,No need to change
+    ![Provide all the info to create a path](images/distribution-path-pathname.png " ")
 6. For **Target Authentication Method**, select ***UserID Alias***
 7. For **Target**,From the drop-down list, select your data transfer protocol as ***WSS**
 8. For **Target Host**, OCI GG Big Data Console URL without https://
@@ -70,12 +71,12 @@ This lab assumes that you completed all preceding labs.
 11. For **Trail Name**, Same as selected trail name
 12. For **Domain**, type ***Distibution***  that was given in ***Task 2: Add Credential Step 2***
 13. For **UserID**, enter ***DistUser*** what was created in ***Task 2: Add Credential Step 4***
-    ![Provide all the info to create a path](images/create-and-run-path-info.png " ")
+    ![Provide all the info to create a path](images/distribution-path-useridalias.png " ")
 
 14.	Click Create & Run. If successful, Distribution Path will be in running status with a green colour.
 
 
-    ![Click on Create and Run button](images/click-create-and-run.png " ")
+    ![Click on Create and Run button](images/distribution-path-submit.png " ")
     ![GoldenGate Deployment Console](images/path-status.png " ")
 15.	In OCI GoldenGate Big Data deployment, go to Receiver Service and observe the Path created there. 
 *** add screen here***
