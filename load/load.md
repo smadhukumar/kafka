@@ -21,19 +21,48 @@ In this lab, you will:
 
 This lab assumes that you completed all preceding labs, and your deployment is in the Active state.
 
-## Task 1: Log in to the Oracle GoldenGate Deployment Console
+## Task 1: Statistics of the extract and replicat before loading the data to ATP.
 
-1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.
-    ![OCI GoldenGate Oracle deploymen Home Page](images/extract-home.png " ")
+1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
+
+2.  On the Deployments page, select **GGSDeployment**.
+
+3.  On the Deployment Details page, click **Launch Console**.
+
+    ![Deployment Details page](images/ggsdeployment-lanuch.png " ")
+
+4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+
+    ![OCI GoldenGate Deployment Console Sign In](images/ggs-login-page.png " ")
+
+    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
+
+5. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
+    ![Extract statistics](images/extract-statatics-pre-status.png " ")
     
-    ![Extract statistics](images/extract-statatics-pre-statuss.png " ")
 
 
-2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
+6.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
 
+7.  On the Deployments page, select **OCI GoldenGate Big Data**.
+
+3.  On the Deployment Details page, click **Launch Console**.
+
+    ![Deployment GGBD  Details page](images/ggbd-launchconsole.png " ")
+
+4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+
+    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
+
+    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
+
+5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-pre-stats.png " ")
-    
+
+   
+
+
 
 ## Task 2: Load a data to source ATP schema
 
@@ -84,44 +113,39 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 8.  Click **Run Script**. The Script Output tab displays confirmation messages.
     ![Pasted script in SQL Worksheet](./images/sql-exec-successful.png " ")
 
-## Task 2: Log in to the Oracle GoldenGate Deployment Console
+## Task 3: Statistics of the extract and replicat post data loading to the ATP.
 
-1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
+1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.
+    ![OCI GoldenGate Oracle deploymen Home Page](images/extract-home.png " ") 
+    ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
-2.  On the Deployments page, select **GGSDeployment**.
 
-3.  On the Deployment Details page, click **Launch Console**.
 
-    ![Deployment Details page](images/01-03-ggs-launchconsole.png " ")
+2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
 
-4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+    ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
+    ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-post-stats.png " ")
+    
 
-    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
+## Task 4 : (optional) List and view the content of the topic on Kafka server.
 
-    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
+1. Open a cloud-shell to log on to Kafka server. Copy the connecting string from
 
-5. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
- ![OCI ggs-statistics](images/ggs-statistics.png " ")
+    ![OCI Cloud shell ](images/cloud-shell-page.png " ")
 
-## Task 3: Log in to the Oracle GoldenGate BigData Deployment Console
+2. Copy the connecting string from terraform script output and paste on a cloud-shell.
 
-1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
+    ![OCI ssh clogin](images/cloud-shell-kafka-server-login.png " ") 
+3. execute ***listtopic*** to list the all the topics.
+    ![Kafka topic list](images/list-topic.png " ") 
 
-2.  On the Deployments page, select **GGBD DEPLOYMENT**.
+4. To view the content of the topic. Execute ***consumetopic topic-name***
+    
+    ```
+    example : <copy> consumetopic SRC_OCIGGLL.SRC_CITY </copy>
+    ```
+    ![Kafka consume-topic](images/consume-topic.png " ") 
 
-3.  On the Deployment Details page, click **Launch Console**.
-
-    ![Deployment GGBD  Details page](images/01-03-ggbd-launchconsole.png " ")
-
-4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
-
-    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
-
-    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
-
-5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
-
-    ![OCI ggbd-statistics](images/ggbd-statistics.png " ")
 
 ## Acknowledgements
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
