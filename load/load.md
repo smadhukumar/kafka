@@ -38,8 +38,8 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
 
 5. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
-    ![Extract statistics](images/extract-statatics-pre-status.png " ")
-    
+     ![Extract click on replicat](images/click-on-replicat.png " ")
+     ![Extract statistics](images/extract-statatics-pre-status.png " ")   
 
 
 6.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
@@ -52,7 +52,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
 
-    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
+    ![OCI GoldenGate Deployment Console Sign In](images/ggs-login-page.png " ")
 
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
 
@@ -68,21 +68,21 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
 
-    ![Select your Autonomous Database instance](./images/02-03-atp.png " ")
+    ![Select your Autonomous Database instance](./images/atp.png " ")
 
 2.  Click **Open DB Actions**.
 
 3.  Log in with the ADMIN user and password provided when you created the ATP instance.
 
-    ![DB Actions log in page](./images/02-05-login.png " ")
+    ![DB Actions log in page](./images/login.png " ")
 
 4.  From the Database Actions menu, under **Development**, select **SQL**.
 
-    ![Database Actions page](./images/02-06-db-actions.png " ")
+    ![Database Actions page](./images/db-actions.png " ")
 
 5.  (Optional) Click **X** to close the Help dialog.
 
-7.  Copy the SQL script and paste into the SQL Worksheet.
+7.  Copy the SQL query and paste into the **SQL Worksheet**.Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -108,9 +108,6 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
     </copy>
     ```
-    ![Pasted script in SQL Worksheet](./images/dml-insert-to-atp.png " ")
-
-8.  Click **Run Script**. The Script Output tab displays confirmation messages.
     ![Pasted script in SQL Worksheet](./images/sql-exec-successful.png " ")
 
 ## Task 3: Statistics of the extract and replicat post data loading to the ATP.
@@ -122,7 +119,7 @@ Verify that **each table** will have ***3*** inserts.
 
 
 
-2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***3*** inserts.
+2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***KAFKAREP*** and Navigate to **Statistics** tab.Verify that **each table** will have ***3*** inserts.
 
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-post-stats.png " ")

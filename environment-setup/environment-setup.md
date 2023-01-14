@@ -105,7 +105,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	```
 	<copy>
-	tenancy_ocid  = "replace_your_tenancy_value_here"
+	tenancy_ocid  = "replace-your-tenancy-value-here"
 	region = "replace-your-region-value here"
 	compartment_ocid = "replace-your-tenancy-value_here"
 	fingerprint="replace-your-fingerprint-value"
@@ -134,7 +134,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 	terraform apply --auto-approve
 	</copy>
 	```
-	After you ran the apply command, terraform will start installation of several virtual machines and an autonomous database. Be patient, it will take some time. But, if you see an error **Service limits exceeded** in output, please visit the Appendix section for instructions to correct the issue.
+	After you ran the apply command, terraform will start installation of a virtual machine and an autonomous database. Be patient, it will take some time. 
 	
 3. Make a copy of your output results in your notepad for later use.
 
@@ -142,35 +142,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 **This concludes this lab. You may now [proceed to the next lab].**
 
-## **Appendix**: Troubleshooting
 
-###	Issue #1 Service Limits Exceeded
-	
-If you see **Service Limits Exceeded** issues when running _**terraform apply**_ command, follow the steps below to resolve them.
-When creating a stack, you must have the available quotas for your tenancy and your compartment. 
-
-Depending on the quota limit you have in your tenancy you can choose from any VM Standard Compute shapes, AMD shapes or Flex Shapes. 
-
-This lab uses the following compute types but not limited to:
-
-
-- Virtual Machine for Apache Kafka - **VM.Standard.E2.2** or more
-
-
-#### Fix for Issue #1
-
-1. Click on the Hamburger menu, go to **Governance** -> **Limits, Quotas and Usage**
-2. Select Compute
-3. Click Scope to change Availability Domain
-4. Look for "Standard2 based VM" and "Standard.E4.Flex based VM", then check **Available** column numbers and sum  them up. All you need to have is at least **3** or more. If you have found correct available capacity, please continue to the next step.
-5. Go to `atp-to-kafka` folder in your cloud-shell and modify variables file with: **`vi vars.tf`**
-
-	![Troubleshooting service limits exceeded.](images/fix-1.png)
-
-6. Fix above accordingly to your **Available** resources.
-7. Go to **Step 5: Terraform**, and continue from substep **2**.
-	
-However, if you are unable to resolve it using above fix, please skip to the **Need Help** section to submit your issue via our support forum.
 
 ## Acknowledgements
 

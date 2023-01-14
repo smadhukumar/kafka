@@ -33,6 +33,7 @@ This lab assumes that you completed all preceding labs.
 2.  On the GoldenGate **Overview** page, click **Create Deployment**.
 
     ![Deployments page](images/create-deployment-select.png "")
+3.  You may need to select a compartment. Under List Scope, from the Comparment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
 
 4.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
 
@@ -40,7 +41,7 @@ This lab assumes that you completed all preceding labs.
 
 6.  For OCPU Count, enter **1**.
 
-7.  For Subnet, select a subnet. If you're using the workshop environment, select **&lt;user&gt;pubsubnt**.
+7.  For Subnet, select a subnet. If you're using the workshop environment, select **LiveLabWebSubnet**.
 
 8.  For License type, select **License included**.
 9.  Click **Show Advanced Options**, and then select **Create Public Endpoint**.

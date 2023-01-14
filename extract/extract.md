@@ -38,7 +38,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 5.  Under **Source Database Credential**, for **Credential Domain**, select **OracleGoldenGate**.
 
-6.  For **Credential Alias**, select the **SourceATP**.
+6.  For **Credential Alias**, select the **ATP_Source**.
 
     ![Add Extract - Source Database Credential](images/credential-store-select.png " ")
 
@@ -80,11 +80,11 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 11. In the UAEXT **Actions** menu, select **Start**. In the Confirm Action dialog, click **OK**.
 
-    ![Start Extract](images/02-12-ggs-start-extract.png)
+    ![Start Extract](images/start-extract.png)
 
     The yellow exclamation point icon changes to a green checkmark.
 
-    ![Extract started](images/02-ggs-extract-started.png)
+    ![Extract started](images/green-extract-status.png)
 
 
 

@@ -23,7 +23,7 @@ This lab assumes that you completed all preceding labs.
 
 1. In OCI GoldenGate Big Data Deployment Details, click **Launch Console** to access the web UI.
 
-    ![Launch Console to access the web UI](images/launch-console.png " ")
+    ![Launch Console to access the web UI](images/deployment-active-page-1.png " ")
 
 2.	Provide **Username** and **Password** to login.
 
@@ -35,16 +35,19 @@ This lab assumes that you completed all preceding labs.
     ![add-replicat](images/classic-replicat.png " ")
 5. Provide **“Basic Information”** ,for **Process Name** as  ***kafkaRep***.
 6. For **Source** as ***Trail***.
-7. For **Trail Name**,trail name that was provided in distribution path
+7. For **Trail Name**,enter trail name as ***RT***.
 8. For **Target**,choose as ***Kafka***
-9. For **Available aliases for Kafka** ,***“assigned connection name”***
+9. For **Available aliases**, choose ***kafka*** which was created previously on LAB 4 task 2.
 10. Click ***Next***
 
     ![Basic Information](images/basic-info.png " ")
 11.	Review the mappings and click **“Next”**.
     ![Basic Mapping](images/replicat-table-mapping.png " ")
-12. In “Properties File”, provide **topic mapping template** as “***${FullyQualifiedTableName}***”. Click **“Crate & Run”**.  
+12. In “Properties File”, provide **topic mapping template** as “***${FullyQualifiedTableName}***”. Click **“Crate & Run”**. 
 
+    ```
+    <copy>${FullyQualifiedTableName}</copy> 
+    ```
 
     ![Replicaiton creation completes](images/click-and-run.png " ")
     ![Replicaiton creation completes](images/replicat-green-status.png" ")

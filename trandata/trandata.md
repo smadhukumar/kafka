@@ -1,4 +1,4 @@
-# ADD TRANDATA
+# Create a source ATP schema and add trandata
 
 ## Introduction
 
@@ -26,21 +26,21 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
 
-    ![Select your Autonomous Database instance](./images/02-03-atp.png " ")
+    ![Select your Autonomous Database instance](./images/atp.png " ")
 
 2.  Click **Open DB Actions**.
 
 3.  Log in with the ADMIN user and password provided when you created the ATP instance.
 
-    ![DB Actions log in page](./images/02-05-login.png " ")
+    ![DB Actions log in page](./images/login.png " ")
 
 4.  From the Database Actions menu, under **Development**, select **SQL**.
 
-    ![Database Actions page](./images/02-06-db-actions.png " ")
+    ![Database Actions page](./images/db-actions.png " ")
 
 5.  (Optional) Click **X** to close the Help dialog.
 
-6.  Copy  the SQL script and paste into the SQL Worksheet.
+6.  Copy the SQL query and paste into the SQL Worksheet.Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -63,11 +63,11 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     </copy>
     ```
 
-    ![Pasted script in SQL Worksheet](./images/02-08-atp-sql.png " ")
+    ![Pasted script in SQL Worksheet](./images/atp-sql.png " ")
 
-9.  Click **Run Script**. The Script Output tab displays confirmation messages.
 
-10. Copy  the SQL script and paste into the SQL Worksheet.
+
+9. Copy the SQL query and paste into the **SQL Worksheet**.Click **Run Script**. The Script Output tab displays confirmation messages.
     ```
     <copy>
 --------------------------------------------------------
@@ -139,18 +139,21 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     ```
     ![Pasted schema script in SQL Worksheet](./images/table-creation-completed.png " ")
 
-11. Click **Run Script**. The Script Output tab displays confirmation messages.
+>**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
 
-	>**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
-
-12. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
+10. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
 
     ![Displays the SRC\_OCIGGLL tables](./images/table-details.png " ")
 
-13. To enable supplemental logging, run the following command:
+11. To **enable supplemental logging**, run the following command:
 
     ```
     <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
+    ```
+12. Run the **alter user** command to unlock the ***ggadmin*** user and set the password for it.
+
+    ```
+    <copy>alter user ggadmin identified by Or4cl3--2022 account unlock;</copy>
     ```
 
 ## Task 2: Add trandata 
@@ -165,29 +168,29 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
 
-    ![OCI GoldenGate Deployment Console Sign In](images/01-04.png " ")
+    ![OCI GoldenGate Deployment Console Sign In](images/login-page.png " ")
 
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
 
 > **Note:** *Ensure that you enable supplemental logging before adding an Extract or you may encounter errors. If you encounter errors, delete and add the Extract before trying again.*
 
-1.  Open the navigation menu and then click **Configuration**.
+5.  Open the navigation menu and then click **Configuration**.
 
     ![Administration Service navigation menu](images/navigation-menu.png " ")
 
-2.  Click **Connect to database SourceATP**.
+6.  Click **Connect to database SourceATP**.
 
     ![Credentials list with Connect to database SourceATP highlighted](images/source-connect.png " ")
 
-3.  Next to **TRANDATA Information** click **Add TRANDATA**.
+7.  Next to **TRANDATA Information** click **Add TRANDATA**.
 
     ![Add TRANDATA](images/add-trandata.png " ")
 
-4.  For **Schema Name**, enter **SRC\_OCIGGLL**, and then click **Submit**.
+8.  For **Schema Name**, enter **SRC\_OCIGGLL**, and then click **Submit**.
 
     ![Schema Name field populated with SRC_OCIGGLL](images/schema-trandata.png " ")
 
-5.  To verify, click **Search TRANDATA**, and then enter **SRC\_OCIGGLL** into the Search field and click **Search**.
+9.  To verify, click **Search TRANDATA**, and then enter **SRC\_OCIGGLL** into the Search field and click **Search**.
 
     ![Search icon highlighted](images/search-schema-trandata.png " ")
 

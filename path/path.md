@@ -59,16 +59,16 @@ This lab assumes that you completed all preceding labs.
     ![Add a New Path](images/add-path-home.png " ")
 
 2. On Add Path page,for **Path Name**, enter ***Dist_Path***.
-3. For **Source**, Select the Extract created
-4. For **Trail Name**, Select the trail fine name
-5. For **Generated Source UR**I,No need to change
+3. For **Source**, Select the Extract as ***UAEXT***.
+4. For **Trail Name**, Select the trail fine name as ***E1***.
+5. For **Generated Source URI**,No need to change
     ![Provide all the info to create a path](images/distribution-path-pathname.png " ")
 6. For **Target Authentication Method**, select ***UserID Alias***
 7. For **Target**,From the drop-down list, select your data transfer protocol as ***WSS**
 8. For **Target Host**, OCI GG Big Data Console URL without https://
 9. For **Port Number**, enter port number as ***443***.
 10. For **Trail Subdirectory**, ***Leave Empty***
-11. For **Trail Name**, Same as selected trail name
+11. For **Trail Name**, Enter trail name as ***RT***
 12. For **Domain**, type ***Distibution***  that was given in ***Task 2: Add Credential Step 2***
 13. For **UserID**, enter ***DistUser*** what was created in ***Task 2: Add Credential Step 4***
     ![Provide all the info to create a path](images/distribution-path-useridalias.png " ")
