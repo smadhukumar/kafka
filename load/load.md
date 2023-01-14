@@ -116,12 +116,13 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 ## Task 3: Statistics of the extract and replicat post data loading to the ATP.
 
 1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.
+Verify that **each table** will have ***3*** inserts.
     ![OCI GoldenGate Oracle deploymen Home Page](images/extract-home.png " ") 
     ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
 
 
-2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
+2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***3*** inserts.
 
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-post-stats.png " ")
