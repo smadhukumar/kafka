@@ -129,7 +129,7 @@ Verify that **each table** will have ***3*** inserts.
 
 1. Open a cloud-shell to log on to Kafka server. Copy the connecting string from
 
-    ![OCI Cloud shell ](images/cloud-shell-page.png " ")
+    ![OCI Cloud shell ](images/cloud-shell-page.PNG " ")
 
 2. Copy the connecting string from terraform script output and paste on a cloud-shell.
 

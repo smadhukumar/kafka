@@ -31,7 +31,7 @@ First, follow the steps below to create a connection to the source Oracle Autono
 
 2.  On the GoldenGate **Connections** page, click **Create connection**.
 
-    ![GoldenGate create-connection page](images/connection-select.png " ")
+    ![GoldenGate create-connection page](images/connection-select.PNG " ")
 
 3.  In the Create connection panel, enter **ATP_Source** for Name.
 
@@ -55,7 +55,7 @@ Follow the steps below to create a connection to the target  Apache Kafka.
 
 2.  On the GoldenGate **Connections** page, click **Create connection**.
 
-    ![GoldenGate create-connection page](images/connection-select.png " ")
+    ![GoldenGate create-connection page](images/connection-select.PNG " ")
 
 3.  In the Create connection panel, enter **kafka** for Name.
 
@@ -70,7 +70,7 @@ Follow the steps below to create a connection to the target  Apache Kafka.
 ## Task 3: Assign Connections to Deployments
 1. Go to Connections and click on **ATP_Connection** that was created in ***Task 1***. Click ***Assign Deployment***.
 
-    ![assign-deployment-oracle](images/assign-deployment-oracle.png " ")
+    ![assign-deployment-oracle](images/assign-deployment-oracle.PNG " ")
 2. Select OCI GoldenGate deployment as ***GGSDeployment***  and click **Assign Deployment**.
 
     ![deployment-oracle-select](images/deployment-oracle-select.png " ")

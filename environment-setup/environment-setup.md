@@ -42,7 +42,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 1. Let's prepare our work directory. We will use Cloud Shell, it is located at the top right corner of the OCI web console
 
-	![](images/prereq-0.png)
+	![prepare our work directory](images/prereq-0.png)
 
 ## Task 2: Clone Lab Repository
 

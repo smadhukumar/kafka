@@ -23,7 +23,7 @@ This lab assumes that you completed all preceding labs.
 
 1. In OCI GoldenGate Big Data Deployment Details, click **Launch Console** to access the web UI.
 
-    ![Launch Console to access the web UI](images/deployment-active-page-1.png " ")
+    ![Launch Console to access the web UI](images/deployment-active-page-1.PNG " ")
 
 2.	Provide **Username** and **Password** to login.
 

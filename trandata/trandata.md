@@ -143,7 +143,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 10. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
 
-    ![Displays the SRC\_OCIGGLL tables](./images/table-details.png " ")
+    ![Displays the SRC\_OCIGGLL tables](./images/table-details.PNG " ")
 
 11. To **enable supplemental logging**, run the following command:
 

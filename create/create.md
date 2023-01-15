@@ -37,7 +37,7 @@ This lab assumes that you completed all preceding labs.
 
 4.  In the Create Deployment panel, enter **GGSDeployment** for Name.
 
-5.  From the Compartment dropdown, select a compartment.
+5.  From the Compartment dropdown, select a compartment **LiveLabCompartment**.
 
 6.  For OCPU Count, enter **1**.
 
