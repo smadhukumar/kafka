@@ -78,7 +78,7 @@ On the Deployment Details page, you can:
 * Review the deployment resource information
 * Add tags
 
-    ![Deployment Details page](./images/deployment-active-page-1.PNG " ")
+    ![Deployment Details page](images/deployment-active-page-1.PNG " ")
     ![Deployment Details page](images/deployment-active-page-2.PNG " ")
 
 ## Task 3: Launch the GoldenGate Deployment Console
