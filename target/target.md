@@ -8,13 +8,13 @@ Estimated time: 5 minutes
 
 ### About Oracle Cloud Infrastructure GoldenGate Deployments
 
-A Oracle Cloud Infrastructure GoldenGate deployment manages the resources it requires to function. The GoldenGate deployment also lets you access the GoldenGate deployment console, where you can access the OCI GoldenGate deployment console to create and manage processes such as Extracts and Replicats.
+Oracle Cloud Infrastructure GoldenGate Deployment manages the resources it requires to function. The GoldenGate deployment also lets you access the GoldenGate deployment console, where you can access the OCI GoldenGate deployment console to create and manage processes such as Extracts and Replicats.
 
 ### Objectives
 
 In this lab, you will:
 * Locate Oracle Cloud Infrastructure GoldenGate in the Console
-* Create a OCI GoldenGate deployment for Big Data
+* Create an OCI GoldenGate deployment for Big Data
 * Review the OCI GoldenGate deployment details
 * Access the OCI GoldenGate deployment console
 
@@ -33,7 +33,7 @@ This lab assumes that you completed all preceding labs.
 2.  On the GoldenGate **Overview** page, click **Create Deployment**.
 
     ![Deployments page](images/create-deployment-select.png "")
-3.  You may need to select a compartment. Under List Scope, from the Comparment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
+3.  You may need to select a compartment. Under List Scope, from the Compartment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
 
 4.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
 
@@ -101,5 +101,5 @@ In this lab, you created an OCI Deployment, reviewed its Deployment details, and
 
 ## Acknowledgements
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
-* **Contributors** -  Deniz Sendil, Database Product Management
+* **Contributors** - Deniz Sendil, Database Product Management
 * **Last Updated By/Date** - 

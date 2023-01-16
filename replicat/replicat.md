@@ -6,9 +6,9 @@ This lab walks you through the steps to create a replicat for OCI GoldenGate  De
 
 Estimated time: 5 minutes
 
-### About Create a Replicat
+### About Creating a Replicat
 
-The Replicat process runs on the target system, reads the trail on that system, and then reconstructs the DML or DDL operations and applies them to the target Apache kafka. Replicat uses dynamic SQL to compile a SQL statement once, and then execute it many times with different bind variable
+The Replicat process runs on the target system, reads the trail on that system, and then reconstructs the DML or DDL operations and applies them to the target Apache Kafka. Replicat uses dynamic SQL to compile a SQL statement once, and then execute it many times with different bind variable
 
 ### Objectives
 
@@ -25,7 +25,7 @@ This lab assumes that you completed all preceding labs.
 
     ![Launch Console to access the web UI](images/deployment-active-page-1.PNG " ")
 
-2.	Provide **Username** and **Password** to login.
+2.	Provide **Username** and **Password** to log in to the OCI GoldenGate Big Data Deployment.
 
     ![Console login](images/console-login.png " ")
 3.	In Administration Service, click ***“Add Replicat”***.
@@ -33,13 +33,12 @@ This lab assumes that you completed all preceding labs.
     ![add-replicat](images/add-replicat.png " ")
 4. Select ***“Classic Replicat”*** and click **“Next”**.
     ![add-replicat](images/classic-replicat.png " ")
-5. Provide **“Basic Information”** ,for **Process Name** as  ***kafkaRep***.
+5. Provide **“Basic Information”**, for **Process Name** as **kafkaRep**.
 6. For **Source** as ***Trail***.
-7. For **Trail Name**,enter trail name as ***RT***.
-8. For **Target**,choose as ***Kafka***
-9. For **Available aliases**, choose ***kafka*** which was created previously on LAB 4 task 2.
-10. Click ***Next***
-
+7. For **Trail Name**, enter trail name as ***RT***.
+8. For **Target**, choose ***Kafka***
+9. For **Available aliases**, choose ***kafka*** which was created previously on **LAB 4 task 2**.
+10. Click ***Next***.
     ![Basic Information](images/basic-info.png " ")
 11.	Review the mappings and click **“Next”**.
     ![Basic Mapping](images/replicat-table-mapping.png " ")

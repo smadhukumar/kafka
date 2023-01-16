@@ -31,13 +31,13 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
     ![Deployment Details page](images/ggsdeployment-lanuch.png " ")
 
-4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+4.  On the OCI GoldenGate Deployment Console sign-in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
 
     ![OCI GoldenGate Deployment Console Sign In](images/ggs-login-page.png " ")
 
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
 
-5. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
+5. Click on the extract name ***UAEXT*** and Navigate to **Statistics** tab. Verify there will be **no transaction statistics** for any tables.
      ![Extract click on replicat](images/click-on-replicat.png " ")
      ![Extract statistics](images/extract-statatics-pre-status.png " ")   
 
@@ -50,13 +50,13 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
     ![Deployment GGBD  Details page](images/ggbd-launchconsole.png " ")
 
-4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+4.  On the OCI GoldenGate Deployment Console sign-in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
 
     ![OCI GoldenGate Deployment Console Sign In](images/ggs-login-page.png " ")
 
     You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
 
-5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab.Verify that **each table** will have ***5*** inserts.
+5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab. Verify that **each table** will have ***5*** inserts.
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-pre-stats.png " ")
 
@@ -82,7 +82,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 5.  (Optional) Click **X** to close the Help dialog.
 
-7.  Copy the SQL query and paste into the **SQL Worksheet**.Click **Run Script**. The Script Output tab displays confirmation messages.
+7.  Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -110,31 +110,28 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     ```
     ![Pasted script in SQL Worksheet](./images/sql-exec-successful.png " ")
 
-## Task 3: Statistics of the extract and replicat post data loading to the ATP.
+## Task 3: Statistics of the extract and replicat, post data loading to the ATP.
 
-1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on extract name ***UAEXT*** and Navigate to **Statistics** tab.
-Verify that **each table** will have ***3*** inserts.
+1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on the extract name ***UAEXT*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
     ![OCI GoldenGate Oracle deploymen Home Page](images/extract-home.png " ") 
     ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
-
-
-2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on Replicat name ***KAFKAREP*** and Navigate to **Statistics** tab.Verify that **each table** will have ***3*** inserts.
+2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on the replicat name ***KAFKAREP*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
 
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-post-stats.png " ")
     
 
-## Task 4 : (optional) List and view the content of the topic on Kafka server.
+## Task 4 : (optional) List and view the content of the topic on the Kafka server.
 
-1. Open a cloud-shell to log on to Kafka server. Copy the connecting string from
+1. Open a Cloud Shell to log on to the Kafka server. Copy the connecting string from
 
-    ![OCI Cloud shell ](images/cloud-shell-page.PNG " ")
+    ![OCI Cloud shell ](images/Cloud Shell-page.PNG " ")
 
-2. Copy the connecting string from terraform script output and paste on a cloud-shell.
+2. Copy the connecting string from terraform script output and paste it a Cloud Shell.
 
-    ![OCI ssh clogin](images/cloud-shell-kafka-server-login.png " ") 
-3. execute ***listtopic*** to list the all the topics.
+    ![OCI ssh clogin](images/Cloud Shell-kafka-server-login.png " ") 
+3. Execute ***listtopic*** to list all the topics.
     ![Kafka topic list](images/list-topic.png " ") 
 
 4. To view the content of the topic. Execute ***consumetopic topic-name***

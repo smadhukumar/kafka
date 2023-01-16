@@ -40,7 +40,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 5.  (Optional) Click **X** to close the Help dialog.
 
-6.  Copy the SQL query and paste into the SQL Worksheet.Click **Run Script**. The Script Output tab displays confirmation messages.
+6.  Copy the SQL query and paste it into the SQL Worksheet. Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -58,19 +58,18 @@ This lab assumes that you completed all preceding labs, and your deployment is i
         commit;
     END;
     /
-   
-
-    </copy>
+   </copy>
     ```
 
-    ![Pasted script in SQL Worksheet](./images/atp-sql.png " ")
+    ![ Pasted script in SQL Worksheet](./images/atp-sql.png " ")
 
 
 
-9. Copy the SQL query and paste into the **SQL Worksheet**.Click **Run Script**. The Script Output tab displays confirmation messages.
+9. Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
+   
     ```
     <copy>
---------------------------------------------------------
+    --------------------------------------------------------
     --  DDL for Table SRC_CITY
     --------------------------------------------------------
     CREATE TABLE "SRC_OCIGGLL"."SRC_CITY" 
@@ -137,7 +136,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     ) ;
     </copy>
     ```
-    ![Pasted schema script in SQL Worksheet](./images/table-creation-completed.png " ")
+    ![ Pasted schema script in SQL Worksheet](./images/table-creation-completed.png " ")
 
 >**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
 
@@ -166,7 +165,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
     ![Deployment Details page](images/ggs-launch-oracle.png " ")
 
-4.  On the OCI GoldenGate Deployment Console sign in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
+4.  On the OCI GoldenGate Deployment Console sign-in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
 
     ![OCI GoldenGate Deployment Console Sign In](images/login-page.png " ")
 

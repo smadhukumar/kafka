@@ -2,19 +2,19 @@
 
 ## Introduction
 
-In this lab, we will show you how to prepare your work environment in Oracle Cloud Infrastructure. We will use cloud-shell which is a web-based terminal built into OCI console. To use the Cloud Shell machine, your tenancy administrator must grant your the required IAM (Identity and Access Management) policy.
+In this lab, we will show you how to prepare your work environment in Oracle Cloud Infrastructure. We will use Cloud Shell which is a web-based terminal built into OCI console. To use the Cloud Shell machine, your tenancy administrator must grant your the required IAM (Identity and Access Management) policy.
 
 This lab is very important and we will create following resources:
 
 - Virtual Cloud Network
-- Source Oracle Autonomous Database
-- Target Apache Kafka
-- GoldenGate Microservices deployment 
+- Source Oracle Autonomous Database.
+- Target Apache Kafka Node.
+
 
 **Make sure** you have the following compute quotas and resources available to use:
 
 1. ATP for Source database - 1 OCPU, 1 TB storage
-2. Virtual Machine for Apache Kafka - VM.Standard2.1
+2. Virtual Machine for Apache Kafka - VM.Standard1.1
 
 
 *Estimated lab time*: 10 minutes
@@ -23,8 +23,8 @@ This lab is very important and we will create following resources:
 
 In this first lab, we will prepare our work environment and create our lab resources using a Terraform script.
 
--   Create SSH keys in a cloud-shell environment.
--	Modify a terraform variables file to interact with script.
+-   Create SSH keys in a Cloud Shell environment.
+-	Modify a terraform variables file to interact with the script.
 -   Prepare our work environment and create our lab resources using a Terraform script.
 
 	![Work environment architecture](images/architecture.gif)
@@ -33,12 +33,12 @@ In this first lab, we will prepare our work environment and create our lab resou
 ### Prerequisites
 
 * The following workshop requires an Oracle Public Cloud Account that will either be supplied by your instructor or can be obtained through **Getting Started** steps.
-* A Cloud tenancy where you have the resources available to provision what is listed in the Architecture Overview.
-* Oracle Cloud Infrastructure supports the following browsers and versions: Google Chrome 69 or later, Safari 12.1 or later, Firefox 62 or later.
+* A Cloud tenancy is where you have the resources available to provision what is listed in the Architecture Overview.
+* Oracle Cloud Infrastructure supports the following browsers and versions: Google Chrome 69 or later, Safari 12.1 or later, and Firefox 62 or later.
 * Your cloud account user must have the required IAM (Identity and Access Management) policy or admin user.
-* Successfully logged in to your cloud tenancy, if not please [login](https://www.oracle.com/cloud/sign-in.html) to your cloud account.
+* Successfully logged in to your cloud tenancy, if not please [login](https://www.oracle.com/cloud/sign-in.html) into your cloud account.
 
-## Task 1: Open Cloud-Shell
+## Task 1: Open Cloud Shell
 
 1. Let's prepare our work directory. We will use Cloud Shell, it is located at the top right corner of the OCI web console
 
@@ -46,13 +46,14 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 ## Task 2: Clone Lab Repository
 
-1. Let's begin our lab. First, we'll make a copy of the lab repository and go to the cloned directory. In your cloud-shell web terminal, issue the below commands.
+1. Let's begin our lab. First, we'll make a copy of the lab repository and go to the cloned directory. In your Cloud Shell web terminal, issue the below commands.
 
 	```
 	<copy>
 	git clone https://github.com/smadhukumar/atp-to-kafka.git
-
 	cd atp-to-kafka
+	
+
 	</copy>
 	```
 
@@ -60,7 +61,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 ## Task 3: Generate SSH keys
 
-1. Once the cloud shell environment is ready, issue the below 4 lines of commands. This will create the ssh key files and the api signing keys:
+1. Once the cloud shell environment is ready, issue the below 4 lines of commands. This will create the ssh key files and the API signing keys:
 
 	```
 	<copy>
@@ -91,7 +92,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	![Configuration file preview.](images/prereq-3.png)
 
-3. Now we need to create a file to help terraform understand your environment. In the cloud-shell, type the below command and modify **terraform.tfvars** file.
+3. Now we need to create a file to help terraform understand your environment. In the Cloud Shell, type the below command and modify **terraform.tfvars** file.
 
 	```
 	<copy>
@@ -101,7 +102,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	_**NOTE:** This will create a new file, you have to press **i** key to enable editing, then "shift+insert" to paste copied parameter. When you are done editing press **esc** button and press **:wq** keys, then hit enter for save & quit.*_
 
-4. Let's replace the following values in double quotes the previously copied values in your notepad.
+4. Let's replace the following values in double quotes with the previously copied values in your notepad.
 
 	```
 	<copy>
@@ -117,7 +118,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 ## Task 5: Terraforming
 
-1. It is time to initialize terraform. Run the below command to download necessary terraform files from the OCI provider.
+1. It is time to initialize terraform. Run the below command to download the necessary terraform files from the OCI provider.
 
 	```
 	<copy>
@@ -134,7 +135,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 	terraform apply --auto-approve
 	</copy>
 	```
-	After you ran the apply command, terraform will start installation of a virtual machine and an autonomous database. Be patient, it will take some time. 
+	After you ran the apply command, terraform will start the installation of a virtual machine and an autonomous database. Be patient, it will take some time. 
 	
 3. Make a copy of your output results in your notepad for later use.
 
@@ -147,5 +148,5 @@ In this first lab, we will prepare our work environment and create our lab resou
 ## Acknowledgements
 
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
-* **Contributors** -  Deniz Sendil, Database Product Management ;Divya Kashyap DevOps and Infra Cloud Engineer, Bangalore, NAC
+* **Contributors** -  Deniz Sendil, Database Product Management;Divya Kashyap DevOps and Infra Cloud Engineer, Bangalore, NAC
 * **Last Updated By/Date** - 

@@ -8,13 +8,13 @@ Estimated time: 5 minutes
 
 ### About Oracle Cloud Infrastructure GoldenGate Deployments
 
-A Oracle Cloud Infrastructure GoldenGate deployment manages the resources it requires to function. The GoldenGate deployment also lets you access the GoldenGate deployment console, where you can access the OCI GoldenGate deployment console to create and manage processes such as Extracts and Replicats.
+Oracle Cloud Infrastructure GoldenGate deployment manages the resources it requires to function. The GoldenGate deployment also lets you access the GoldenGate deployment console, where you can access the OCI GoldenGate deployment console to create and manage processes such as Extracts and Replicats.
 
 ### Objectives
 
 In this lab, you will:
 * Locate Oracle Cloud Infrastructure GoldenGate in the Console
-* Create a OCI GoldenGate deployment
+* Create an OCI GoldenGate deployment
 * Review the OCI GoldenGate deployment details
 * Access the OCI GoldenGate deployment console
 
@@ -28,12 +28,12 @@ This lab assumes that you completed all preceding labs.
 
 1.  Open the **Navigation Menu**, navigate to **Oracle Database**, and select **GoldenGate**.
 
-    ![GoldenGate in Oracle Cloud navigation menu](images/database-goldengate.png " ")
+    ![GoldenGate in the Oracle Cloud navigation menu](images/database-goldengate.png " ")
 
 2.  On the GoldenGate **Overview** page, click **Create Deployment**.
 
     ![Deployments page](images/create-deployment-select.png "")
-3.  You may need to select a compartment. Under List Scope, from the Comparment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
+3.  You may need to select a compartment. Under List Scope, from the Compartment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
 
 4.  In the Create Deployment panel, enter **GGSDeployment** for Name.
 
@@ -41,16 +41,16 @@ This lab assumes that you completed all preceding labs.
 
 6.  For OCPU Count, enter **1**.
 
-7.  For Subnet, select a subnet. If you're using the workshop environment, select subnet as  **LiveLabWebSubnet**.
+7.  For Subnet, select a subnet. If you're using the workshop environment, select the subnet as  **LiveLabWebSubnet****.
 
-8.  For License type, select **Bring You Own License (BYOL)**.
+8.  For License type, select **Bring Your Own License (BYOL)**.
 
 9. Click **Show Advanced Options**, and then select **Create Public Endpoint**.
 
     ![Completed Create GoldenGate Deployment fields](images/create-deployment-general-info.png " ")
 
 10. Click **Next**.
-11. Select a technology as **Oracle Database**.
+11. Select a technology such as **Oracle Database****.
 
 11. For GoldenGate Instance Name, enter **ggsource**.
 
