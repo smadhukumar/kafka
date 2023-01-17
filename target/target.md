@@ -85,7 +85,7 @@ On the Deployment Details page, you can:
 
 1. When the deployment is active, click **Launch Console**.
 
-    ![Launch Console](images/deployment-lanuch.png " ")
+    ![Launch Console](images/deployment-lanch.png " ")
 
 2. To log in to the GoldenGate deployment console, enter **oggadmin** for User Name and the password you provided above, and then click **Sign In**.
 
