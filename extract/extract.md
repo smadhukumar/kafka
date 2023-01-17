@@ -4,11 +4,12 @@
 
 This lab walks you through the steps to create and run an Extract in the Oracle Cloud Infrastructure (OCI) GoldenGate Deployment Console.
 
-Estimated time: 15 minutes
+Estimated Time: 15 minutes
 
 ### About Extracts 
 
 An Extract is a process that extracts, or captures, data from a source database. 
+
 
 ### Objectives
 
@@ -87,7 +88,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     ![Extract started](images/green-extract-status.png)
 
 
-
+You may now **proceed to the next lab**.
 ## Learn more
 
 * [Creating an Extract](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/goldengate-deployment-console.html#GUID-3B004DB0-2F41-4FC2-BDD4-4DE809F52448)

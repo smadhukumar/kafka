@@ -10,6 +10,7 @@ Estimated time: 15 minutes
 
 Use ADD TRANDATA to enable Oracle GoldenGate to acquire the transaction information that it needs from the transaction records.
 
+
 ### Objectives
 
 In this lab, you will:
@@ -202,6 +203,7 @@ To return to the GoldenGate Deployment Console Home page, click **Overview** in 
 
 * [ADD TRANDATA](https://docs.oracle.com/en/middleware/goldengate/core/21.3/gclir/add-trandata.html)
 
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 

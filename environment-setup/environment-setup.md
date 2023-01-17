@@ -17,7 +17,7 @@ This lab is very important and we will create following resources:
 2. Virtual Machine for Apache Kafka - VM.Standard1.1
 
 
-*Estimated lab time*: 10 minutes
+Estimated Time: 20 minutes
 
 ### Objectives
 
@@ -141,7 +141,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	![Copy and save output results.](images/git-1.png)
 
-**This concludes this lab. You may now [proceed to the next lab].**
+You may now **proceed to the next lab**.
 
 
 

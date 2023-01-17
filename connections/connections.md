@@ -4,7 +4,7 @@
 
 This lab walks you through the steps to create a connection to ***ATP*** and ***Kafka*** from an Oracle Cloud Infrastructure (OCI) GoldenGate deployment.
 
-Estimated time: 5 minutes
+Estimated Time: 5 minutes
 
 ### About Creating the ATP and Kafka Connection
 
@@ -81,6 +81,8 @@ Follow the steps below to create a connection to the target  Apache Kafka.
 4.	Select OCI GoldenGate for Big Data deployment as ***OCI GoldenGate Big Data*** and click Assign Deployment.
     ![assign-kafka-connection](images/kafka-connection.png " ")
 In this lab, you created a connection to source ATP and target Apache Kafka.
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 

@@ -95,6 +95,8 @@ After you log in, you're brought to the GoldenGate deployment console home page.
 
 In this lab, you created an OCI Deployment, reviewed its Deployment details, and launched the Deployment Console.
 
+You may now **proceed to the next lab**.
+
 ## Learn More
 
 * [Managing Deployments](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/deployments.html)

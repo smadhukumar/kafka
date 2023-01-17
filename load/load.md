@@ -4,11 +4,12 @@
 
 This lab walks you through the steps to create and run an Extract in the Oracle Cloud Infrastructure (OCI) GoldenGate Deployment Console.
 
-Estimated time: 15 minutes
+Estimated Time: 15 minutes
 
 ### About Trandata 
 
 Use ADD TRANDATA to enable Oracle GoldenGate to acquire the transaction information that it needs from the transaction records.
+
 
 ### Objectives
 
@@ -113,7 +114,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 ## Task 3: Statistics of the extract and replicat, post data loading to the ATP.
 
 1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on the extract name ***UAEXT*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
-    ![OCI GoldenGate Oracle deploymen Home Page](images/extract-home.png " ") 
+    ![OCI GoldenGate Oracle deployment Home Page](images/extract-home.png " ") 
     ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
 2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on the replicat name ***KAFKAREP*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
@@ -124,13 +125,13 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 ## Task 4 : (optional) List and view the content of the topic on the Kafka server.
 
-1. Open a Cloud Shell to log on to the Kafka server. Copy the connecting string from
+1. Open a Cloud Shell to log on to the Kafka server.
+    ![OCI Cloud shell](images/cloud-shell-page.png " ")
 
-    ![OCI Cloud shell ](images/Cloud Shell-page.PNG " ")
+2. Copy the ssh connecting string from Cloud Shell terraform output. and paste it into a Cloud Shell.
 
-2. Copy the connecting string from terraform script output and paste it a Cloud Shell.
-
-    ![OCI ssh clogin](images/Cloud Shell-kafka-server-login.png " ") 
+    ![OCI ssh clogin](images/cloud-shell-kafka-server-login.png " ") 
+    
 3. Execute ***listtopic*** to list all the topics.
     ![Kafka topic list](images/list-topic.png " ") 
 
@@ -140,6 +141,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     example : <copy> consumetopic SRC_OCIGGLL.SRC_CITY </copy>
     ```
     ![Kafka consume-topic](images/consume-topic.png " ") 
+
 
 
 ## Acknowledgements

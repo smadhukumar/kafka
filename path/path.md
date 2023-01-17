@@ -4,11 +4,13 @@
 
 This lab walks you through the steps to create a distribution path from source OCI GoldenGate Deployment to OCI GoldenGate for Big Data Deployment. 
 
-Estimated time: 5 minutes
+Estimated Time: 10 minutes
 
 ### About Creating a Distribution Path
 
 The Distribution Server is accessible from the Service Manager home page. From the Service Manager home page, click the Distribution Server. The Distribution Server Overview page is displayed where you can view the path that connects the extract and replicat. The path between a source and target deployment can be set using the Distribution Server. You can also create target-initiated distribution paths from the Receiver Server
+
+*Estimated time*: 10 minutes
 
 ### Objectives
 
@@ -75,6 +77,8 @@ This lab assumes that you completed all preceding labs.
     ![GoldenGate Deployment Console](images/recv-status.png " ")
 
 In this lab, you created a distribution path from source OCI GoldenGate Deployment to OCI GoldenGate for Big Data Deployment.
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 

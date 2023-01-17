@@ -4,9 +4,7 @@
 
 Oracle GoldenGate, the industry-leading data replication, and integration software is now available as a fully-managed, cloud-native service on Oracle Cloud Infrastructure. This workshop guides you through how to use ATP as the source database and OCI GoldenGate as the source deployment to extract data from ATP. OCI GoldenGate delivers the data into a Kafka node running on an OCI Compute Instance. The Kafka node will be configurable through terraform and the advertised listener will automatically be assigned with the Public IP of the compute node. Kafka & Zookeeper services will be started with the terraform as well. Topics will be created by OCI GoldenGate automatically.
 
-
-
-Estimated Workshop Time: 2 hours
+Estimated Time: 60 minutes
 
 ### About Oracle Cloud Infrastructure GoldenGate
 
@@ -23,6 +21,8 @@ Oracle Cloud Infrastructure GoldenGate is a fully-managed service that uses Orac
 * Explore OCI Cloud Shell, web-based terminal
 * Benefit from OCI terraform provider
 * Explore Autonomous Database and its capabilities
+
+You may now **proceed to the next lab**.
 
 ## Learn more
 

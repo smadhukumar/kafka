@@ -4,7 +4,8 @@
 
 This lab walks you through the steps to create a replicat for OCI GoldenGate  Deployment. 
 
-Estimated time: 5 minutes
+Estimated Time: 10 minutes
+
 
 ### About Creating a Replicat
 
@@ -52,6 +53,8 @@ This lab assumes that you completed all preceding labs.
     ![Replicaiton creation completes](images/replicat-green-status.png" ")
 
 In this lab, you created a replicat for OCI GoldenGate  Deployment.
+
+You may now **proceed to the next lab**.
 
 ## Learn More
 * [Creating a Replicat](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/goldengate-deployment-console.html#GUID-063CCFD9-81E0-4FEC-AFCC-3C9D9D3B8953)
