@@ -127,7 +127,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1. Open a Cloud Shell to log on to the Kafka server.
 
-    ![OCI Cloud shell](images/cloud-shell-page.png.png " ")
+    ![OCI Cloud shell](images/cloud-shell-page.png " ")
 
 2. Copy the ssh connecting string from Cloud Shell terraform output. and paste it into a Cloud Shell.
 
