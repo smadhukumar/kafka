@@ -139,7 +139,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 	
 3. Make a copy of your output results in your notepad for later use.
 
-	![Copy and save output results.](images/git-1.png)
+	![Copy and save output results.](images/zoom-terraform-output.png)
 
 You may now **proceed to the next lab**.
 

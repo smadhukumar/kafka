@@ -119,8 +119,8 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on the replicat name ***KAFKAREP*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
 
-    ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
-    ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-post-stats.png " ")
+    ![OCI GoldenGate Big Data deployment Home Page](images/replicat-home.png " ")
+    ![OCI GoldenGate Big Data deployment Home Page](images/replicat-post-stats.png " ")
     
 
 ## Task 4 : (optional) List and view the content of the topic on the Kafka server.
