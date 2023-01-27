@@ -6,7 +6,7 @@ This lab walks you through the steps to create a distribution path from source O
 
 Estimated Time: 10 minutes
 
-### About Creating a Distribution Path
+### About Distribution Path
 
 The Distribution Server is accessible from the Service Manager home page. From the Service Manager home page, click the Distribution Server. The Distribution Server Overview page is displayed where you can view the path that connects the extract and replicat. The path between a source and target deployment can be set using the Distribution Server. You can also create target-initiated distribution paths from the Receiver Server
 

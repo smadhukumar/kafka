@@ -7,7 +7,7 @@ This lab walks you through the steps to create a replicat for OCI GoldenGate  De
 Estimated Time: 10 minutes
 
 
-### About Creating a Replicat
+### About Replicat
 
 The Replicat process runs on the target system, reads the trail on that system, and then reconstructs the DML or DDL operations and applies them to the target Apache Kafka. Replicat uses dynamic SQL to compile a SQL statement once, and then execute it many times with different bind variable
 
