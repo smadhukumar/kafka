@@ -62,11 +62,13 @@ This lab assumes that you completed all preceding labs.
 
     ![Completed GoldenGate details](images/create-deployment-completed.png " ")
 
-You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.
+> **Note:** *You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.*
+
+15. Deployment creation completed
+
+    ![Deployment creation completed](images/deployment-active-status.png " ")
 
 ## Task 2: Create the target deployment.
-
-> **Note:** *Compartment names in the screenshots may differ from values that appear in your environment.*
 
 1. Go back to the GoldenGate **Overview** page, click **Create Deployment**.
 
@@ -104,6 +106,9 @@ You're brought to the Deployment Details page. It takes a few minutes for the de
 
 > **Note:** *You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.*
 
+15. Deployment creation completed
+
+    ![Deployment creation completed](images/deployment-lanch-kafka.png " ")
 You may now **proceed to the next lab**.
 
 ## Learn More
