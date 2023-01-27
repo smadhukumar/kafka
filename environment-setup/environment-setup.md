@@ -2,13 +2,16 @@
 
 ## Introduction
 
-In this lab, we will show you how to prepare your work environment in Oracle Cloud Infrastructure. We will use Cloud Shell which is a web-based terminal built into OCI console. To use the Cloud Shell machine, your tenancy administrator must grant your the required IAM (Identity and Access Management) policy.
+In this lab, you learn to set up your environment in Oracle Cloud Infrastructure using Cloud Shell. Cloud Shell is a web based terminal built into the Oracle Cloud console
 
 This lab is very important and we will create following resources:
 
-- Virtual Cloud Network
+- Virtual Cloud Network.
 - Source Oracle Autonomous Database.
 - Target Apache Kafka Node.
+- Create SSH keys in Cloud Shell.
+- Modify a terraform variables file to interactive with the script.
+- Set up your environment and create resources using the terraform script.
 
 
 **Make sure** you have the following compute quotas and resources available to use:
@@ -27,8 +30,6 @@ In this first lab, we will prepare our work environment and create our lab resou
 -	Modify a terraform variables file to interact with the script.
 -   Prepare our work environment and create our lab resources using a Terraform script.
 
-	![Work environment architecture](images/architecture.gif)
-
 
 ### Prerequisites
 
@@ -38,15 +39,15 @@ In this first lab, we will prepare our work environment and create our lab resou
 * Your cloud account user must have the required IAM (Identity and Access Management) policy or admin user.
 * Successfully logged in to your cloud tenancy, if not please [login](https://www.oracle.com/cloud/sign-in.html) into your cloud account.
 
-## Task 1: Open Cloud Shell
+## Task 1: Use Cloud Shell to clone the lab repository
 
-1. Let's prepare our work directory. We will use Cloud Shell, it is located at the top right corner of the OCI web console
+1. In the Oracle Cloud console global header, click Cloud Shell. Cloud Shell opens as a separate panel in the Oracle Cloud console, which you can expand to full screen.
+
+  _**Note:** *It takes a few minutes for Cloud Shell to connect and load your session.*_
 
 	![prepare our work directory](images/prereq-0.png)
 
-## Task 2: Clone Lab Repository
-
-1. Let's begin our lab. First, we'll make a copy of the lab repository and go to the cloned directory. In your Cloud Shell web terminal, issue the below commands.
+2. After Cloud Shell connects, enter the following command to clone the repository:
 
 	```
 	<copy>
@@ -59,9 +60,9 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	![Cloned directory in Cloud Shell Terminal.](images/git.png)
 
-## Task 3: Generate SSH keys
+## Task 2: Generate SSH keys
 
-1. Once the cloud shell environment is ready, issue the below 4 lines of commands. This will create the ssh key files and the API signing keys:
+1. In Cloud Shell, enter the following commands to add the execute permission to generate_pemkey.sh, and then run the file.
 
 	```
 	<copy>
@@ -72,7 +73,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 	</copy>
 	```
 
-2. Copy your public _**pem**_ file content:
+2. Enter the following command to copy your public pem file content:
 
 	```
 	<copy>
@@ -82,17 +83,22 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	![Image showing steps to copy pem file from Cloud Shell.](images/prereq-1.png)
 
-## Task 4: Add Public API keys and Modify Terraform variables
+## Task 3: Add Public API keys and Modify Terraform variables
 
-1. Click on the top right corner of your OCI web console and click on your **profile**. Then navigate to the **API Keys** from the left pane and click on the **Add API Key** button. A small pop-up will appear and you need to choose the "Paste Public Key" radio button. Paste your **copied public pem key** there and click on the **Add** button.
+1. In the Oracle Cloud console, click **Profile**, and then select your username.
+Needs to add screenshot *(Add a screenshot here of the Oracle Cloud global header with the Profile menu open.)*
 
 	![Adding the API to OCI web console.](images/prereq-2.png)
+2. On the **User Details** page, under **Resources**, click **API Keys**, and then click **Add API Key**.
+* screeensot needs add * 
+3. In the Add API Key dialog, select **Paste Public Key**, paste the public pem key copied from Cloud Shell into the Public Key text area, and then click **Add**.
 
-2. A small confirmation will show after you added an API key. **Copy** these values and open a notepad to keep these for a later use.
-
+4.  In the Configuration File Preview dialog, copy the values into a text editor so you can refer to them in the next steps.
 	![Configuration file preview.](images/prereq-3.png)
 
-3. Now we need to create a file to help terraform understand your environment. In the Cloud Shell, type the below command and modify **terraform.tfvars** file.
+
+
+5. In Cloud Shell, enter the following command to modify **terraform.tfvars**:.
 
 	```
 	<copy>
@@ -100,9 +106,9 @@ In this first lab, we will prepare our work environment and create our lab resou
 	</copy>
 	```
 
-	_**NOTE:** This will create a new file, you have to press **i** key to enable editing, then "shift+insert" to paste copied parameter. When you are done editing press **esc** button and press **:wq** keys, then hit enter for save & quit.*_
+	_**NOTE:** This creates a new file. Press i on your keyboard to enable editing, and then press Shift+Insert to paste a copied parameter. When you're done editing, press the escape key, then :wq, and then Enter to save and quit._
 
-4. Let's replace the following values in double quotes with the previously copied values in your notepad.
+6. Replace the following placeholders in double quotes with the configuration file values copied to your text editor..
 
 	```
 	<copy>
@@ -116,7 +122,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 
 	_**NOTE:** if you are an experienced OCI user, I'd highly suggest you use your own compartment to isolate all resources. To do so, provide your preferred compartment OCID in `compartment_ocid`. If you are new to OCI cloud, just enter your Tenancy value as compartment OCID._
 
-## Task 5: Terraforming
+## Task 4: Terraforming
 
 1. It is time to initialize terraform. Run the below command to download the necessary terraform files from the OCI provider.
 
@@ -126,7 +132,7 @@ In this first lab, we will prepare our work environment and create our lab resou
 	</copy>
 	```
 
-2. Plan and apply steps should not ask for any input from you. If it asks you to provide, for example; _**`compartment_ocid`**_ , then check previous steps.
+2. Enter the following terraform commands:
 
 	```
 	<copy>
@@ -135,9 +141,9 @@ In this first lab, we will prepare our work environment and create our lab resou
 	terraform apply --auto-approve
 	</copy>
 	```
-	After you ran the apply command, terraform will start the installation of a virtual machine and an autonomous database. Be patient, it will take some time. 
+	_**NOTE:**: Plan and apply shouldn't prompt user input. If it does, then refer to the API key configuration values copied to your text editor from Task 4._
 	
-3. Make a copy of your output results in your notepad for later use.
+3. Make a copy of the output results in your notepad for later use.
 
 	![Copy and save output results.](images/zoom-terraform-output.png)
 

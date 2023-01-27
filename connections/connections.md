@@ -1,4 +1,4 @@
-# Create the ATP and Kafka Connection
+# Create and assign connections
 
 ## Introduction
 
@@ -13,8 +13,9 @@ You can create and save the database login credentials, Kafka connectivity, and 
 ### Objectives
 
 In this lab, you will:
-* Locate Oracle Cloud Infrastructure GoldenGate in the Console
-* Create a connection to ATP and Kafka from OCI GOldenGate deployment
+* Create a connection to ATP
+* Create a connection to Apache Kafka
+* Assign the connections to their respective deployments
 
 
 ### Prerequisites
@@ -23,7 +24,7 @@ This lab assumes that you completed all preceding labs.
 
 ## Task 1: Create a connection to ATP
 
-First, follow the steps below to create a connection to the source Oracle Autonomous Transaction Processing \(ATP\) Database and target Apache Kafka.
+Follow these steps to create a connection to the source Autonomous Transaction Processing (ATP) database.
 
 1.  Open the **Navigation Menu**, navigate to **Oracle Database**, and select **GoldenGate**.
 
@@ -35,12 +36,12 @@ First, follow the steps below to create a connection to the source Oracle Autono
 
 3.  In the Create connection panel, enter **ATP_Source** for Name.
 
-4.  From the Compartment dropdown menu, select a compartment (in this lab,we choose compartment as **LiveLabCompartment**).
+4.  From the Compartment dropdown, select a compartment. For example, **LiveLabCompartment**.
 
-5.  Select Type as **OCI Autonomous Database** and click Next.
+5.  For Type, select **OCI Autonomous Database** and click **Next**.
     ![GoldenGate create connection creation page](images/oci-connection-choose.png " ")
 
-6.  On the Create connection **Connection details** page, choose the radio button **Select Database** to select the **ATP Database** that was created in **Lab 1**. Provide Database username as ***ggadmin***, password as ***Or4cl3--2022*** and click Create.
+6.  For Database details, choose Select database, and then select the ATP database created in Lab 1. Enter ***ggadmin*** for Database username, and , ***Or4cl3--2022*** for password, and then click  **Create**.
     ![atp database connection created](images/create-atp-connection.png " ")
 
 
@@ -59,27 +60,30 @@ Follow the steps below to create a connection to the target  Apache Kafka.
 
 3.  In the Create connection panel, enter **kafka** for Name.
 
-4.  From the Compartment dropdown menu, select a compartment (in this lab, we choose compartment as **LiveLabCompartment**).
+4.  From the Compartment dropdown, select a compartment. For example, **LiveLabCompartment**.
 
-5.  Select Type as **Apache Kafka** and click Next.
+5.  For Type, select **Apache Kafka**, and then click **Next**.
     ![Connection type selected as Apache Kafka](images/kafka-connection-choose.png " ")
 
-6.  On the Create connection **Connection details** page, provide the public IP of Bootstrap servers of Kafka OCI Instance that was configured in Lab 1 for **Host**. Port as **9092**. Select Security Protocol as **Plaintext** and click Create.
+6.  For Host, enter the public IP of the Kafka Bootstrap servers configured in Lab 1.
+
+7.  For Port, enter **9092**
     ![public IP of bootstrap server](images/bootstrap-server-details.png " ")
+8.  For Security protocol, select **Plaintext**, and then click **Create**.
 
 ## Task 3: Assign Connections to Deployments
-1. Go to Connections and click on **ATP_Connection** which was created in ***Task 1***. Click ***Assign Deployment***.
+1. On the Connections page, select  **ATP_Source**.
 
+    ![assign-deployment-oracle](images/connection-page.png " ")
+
+2. On the Connection details page, under Resources, click **Assigned deployments**, and then click **Assign deployment**.
     ![assign-deployment-oracle](images/assign-deployment-oracle.PNG " ")
-2. Select OCI GoldenGate deployment as ***GGSDeployment*** and click **Assign Deployment**.
-
+3.	In the Assign deployment dialog, select **GGSDeployment** from the dropdown, and then click **Assign deployment**.
     ![deployment-oracle-select](images/deployment-oracle-select.png " ")
 
-3.	Go back to **Connections** and click on **Kafka Connection** that was created in **Task 2**.
+4.	Repeat these steps to assign ***OCI GoldenGate Big Data*** to the Kafka connection.
 
-    ![Kafka-connection](images/assign-kafka-connection.png " ")
-4.	Select OCI GoldenGate for Big Data deployment as ***OCI GoldenGate Big Data*** and click Assign Deployment.
-    ![assign-kafka-connection](images/kafka-connection.png " ")
+
 In this lab, you created a connection to source ATP and target Apache Kafka.
 
 You may now **proceed to the next lab**.
