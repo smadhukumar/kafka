@@ -14,40 +14,36 @@
         },
 		{
 
-            "title": "Lab 1: Set Up the Environment",
+            "title": "Lab 1: Environment Setup",
             "description": "Provision Autonomous Databases to use as the source and target as kafka.",
             "filename": "../../environment-setup/environment-setup.md"
         },
         {
-            "title": "Lab 2: Create the Oracle Cloud Infrastructure GoldenGate Deployment for Source",
+            "title": "Lab 2: Create the OCI GoldenGate deployments",
             "filename": "../../create/create.md"
         },
         {
-            "title": "Lab 3: Create the Oracle Cloud Infrastructure GoldenGate Deployment for Target",
-            "filename": "../../target/target.md"
-        },
-        {
-            "title": "Lab 4: Create the ATP and Kafka Connection",
+            "title": "Lab 3: Create and assign connections",
             "filename": "../../connections/connections.md"
         },
         {
-            "title": "Lab 5: Create a source ATP schema and add trandata",
+            "title": "Lab 4: Create a source ATP schema and add trandata",
             "filename": "../../trandata/trandata.md"
         },
 		{
-            "title": "Lab 6: Create and run the Extract",
+            "title": "Lab 5: Create and run the Extract",
             "filename": "../../extract/extract.md"
         },
         {
-            "title": "Lab 7: Create and run the Distribution Path",
+            "title": "Lab 6: Create and run the Distribution Path",
             "filename": "../../path/path.md"
         },
         {
-            "title": "Lab 8: Create and run the Replicat",
+            "title": "Lab 7: Create and run the Replicat",
             "filename": "../../replicat/replicat.md"
         },
         {
-            "title": "Lab 9: Load data to ATP",
+            "title": "Lab 8: Load data to ATP",
             "filename": "../../load/load.md"
         },
         {
