@@ -124,7 +124,7 @@ Needs to add screenshot *(Add a screenshot here of the Oracle Cloud global heade
 
 ## Task 4: Terraforming
 
-1. It is time to initialize terraform. Run the below command to download the necessary terraform files from the OCI provider.
+1. Run the following command to download the necessary terraform values from Oracle Cloud Infrastructure.
 
 	```
 	<copy>

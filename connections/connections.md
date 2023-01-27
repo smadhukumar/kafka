@@ -50,26 +50,22 @@ Follow these steps to create a connection to the source Autonomous Transaction P
 
 Follow the steps below to create a connection to the target  Apache Kafka.
 
-1.  Open the **Navigation Menu**, navigate to **Oracle Database**, and select **GoldenGate**.
-
-    ![GoldenGate in Oracle Cloud navigation menu](images/database-goldengate.png " ")
-
-2.  On the GoldenGate **Connections** page, click **Create connection**.
+1.  On back to the GoldenGate **Connections** page, click **Create connection**.
 
     ![GoldenGate create-connection page](images/connection-select.PNG " ")
 
-3.  In the Create connection panel, enter **kafka** for Name.
+2.  In the Create connection panel, enter **kafka** for Name.
 
-4.  From the Compartment dropdown, select a compartment. For example, **LiveLabCompartment**.
+3.  From the Compartment dropdown, select a compartment. For example, **LiveLabCompartment**.
 
-5.  For Type, select **Apache Kafka**, and then click **Next**.
+4.  For Type, select **Apache Kafka**, and then click **Next**.
     ![Connection type selected as Apache Kafka](images/kafka-connection-choose.png " ")
 
-6.  For Host, enter the public IP of the Kafka Bootstrap servers configured in Lab 1.
+5.  For Host, enter the public IP of the Kafka Bootstrap servers configured in Lab 1.
 
-7.  For Port, enter **9092**
+6.  For Port, enter **9092**
     ![public IP of bootstrap server](images/bootstrap-server-details.png " ")
-8.  For Security protocol, select **Plaintext**, and then click **Create**.
+7.  For Security protocol, select **Plaintext**, and then click **Create**.
 
 ## Task 3: Assign Connections to Deployments
 1. On the Connections page, select  **ATP_Source**.
