@@ -128,7 +128,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
     ![OCI Cloud shell](images/cloud-shell-page-home.png " ")
 
 2. Copy the ssh connecting string from Cloud Shell terraform output. and paste it into a Cloud Shell.
-
+    ![OCI Cloud shell](images/cloud-shell-ssh.png " ")
     ![OCI ssh clogin](images/cloud-shell-kafka-server-login.png " ") 
     
 3. Execute ***listtopic*** to list all the topics.
