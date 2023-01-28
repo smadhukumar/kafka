@@ -27,21 +27,19 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
 
-    ![Select your Autonomous Database instance](./images/atp.png " ")
+    ![Select your Autonomous Database instance](./images/atp-source-page.png " ")
 
-2.  Click **Open DB Actions**.
+2.  Click on  **Database actions**.
 
-3.  Log in with the ADMIN user and password provided when you created the ATP instance.
+    ![DB Actions log in page](./images/atp-db-options.png " ")
 
-    ![DB Actions log in page](./images/login.png " ")
-
-4.  From the Database Actions menu, under **Development**, select **SQL**.
+3.  From the Database Actions menu, under **Development**, select **SQL**.
 
     ![Database Actions page](./images/db-actions.png " ")
 
-5.  (Optional) Click **X** to close the Help dialog.
+4.  (Optional) Click **X** to close the Help dialog.
 
-6.  Copy the SQL query and paste it into the SQL Worksheet. Click **Run Script**. The Script Output tab displays confirmation messages.
+5.  Copy the SQL query and paste it into the SQL Worksheet. Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -66,7 +64,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 
 
-9. Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
+6. Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
    
     ```
     <copy>
@@ -141,16 +139,16 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 >**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
 
-10. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
+7. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
 
     ![Displays the SRC\_OCIGGLL tables](./images/table-details.PNG " ")
 
-11. To **enable supplemental logging**, run the following command:
+8. To **enable supplemental logging**, run the following command:
 
     ```
     <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
     ```
-12. Run the **alter user** command to unlock the ***ggadmin*** user and set the password for it.
+9. Run the **alter user** command to unlock the ***ggadmin*** user and set the password for it.
 
     ```
     <copy>alter user ggadmin identified by Or4cl3--2022 account unlock;</copy>

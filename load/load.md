@@ -69,21 +69,19 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
 
-    ![Select your Autonomous Database instance](./images/atp.png " ")
+    ![Select your Autonomous Database instance](./images/atp-source-page.png " ")
 
-2.  Click **Open DB Actions**.
+2.  Click on  **Database actions**.
 
-3.  Log in with the ADMIN user and password provided when you created the ATP instance.
+    ![DB Actions log in page](./images/atp-db-options.png " ")
 
-    ![DB Actions log in page](./images/login.png " ")
-
-4.  From the Database Actions menu, under **Development**, select **SQL**.
+3.  From the Database Actions menu, under **Development**, select **SQL**.
 
     ![Database Actions page](./images/db-actions.png " ")
 
-5.  (Optional) Click **X** to close the Help dialog.
+4.  (Optional) Click **X** to close the Help dialog.
 
-7.  Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
+5.  Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -127,7 +125,7 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 1. Open a Cloud Shell to log on to the Kafka server.
 
-    ![OCI Cloud shell](images/cloud-shell-page.png " ")
+    ![OCI Cloud shell](images/cloud-shell-page-home.png " ")
 
 2. Copy the ssh connecting string from Cloud Shell terraform output. and paste it into a Cloud Shell.
 
