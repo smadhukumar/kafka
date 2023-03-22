@@ -60,6 +60,6 @@ You may now **proceed to the next lab**.
 * [Creating a Replicat](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/goldengate-deployment-console.html#GUID-063CCFD9-81E0-4FEC-AFCC-3C9D9D3B8953)
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
-* **Contributors** -  Deniz Sendil, Database Product Management
-* **Last Updated By/Date** - 
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
+* **Contributors** -  Denis Gray, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
+* **Last Updated By/Date** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration

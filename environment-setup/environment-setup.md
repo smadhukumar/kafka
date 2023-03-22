@@ -2,25 +2,9 @@
 
 ## Introduction
 
-In this lab, you learn to set up your environment in Oracle Cloud Infrastructure using Cloud Shell. Cloud Shell is a web based terminal built into the Oracle Cloud console
+In this lab, you learn to set up your environment in Oracle Cloud Infrastructure using Cloud Shell. Cloud Shell is a web based terminal built into the Oracle Cloud console.
 
-This lab is very important and we will create following resources:
-
-- Virtual Cloud Network.
-- Source Oracle Autonomous Database.
-- Target Apache Kafka Node.
-- Create SSH keys in Cloud Shell.
-- Modify a terraform variables file to interactive with the script.
-- Set up your environment and create resources using the terraform script.
-
-
-**Make sure** you have the following compute quotas and resources available to use:
-
-1. ATP for Source database - 1 OCPU, 1 TB storage
-2. Virtual Machine for Apache Kafka - VM.Standard1.1
-
-
-Estimated Time: 20 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
@@ -31,17 +15,9 @@ In this first lab, we will prepare our work environment and create our lab resou
 -   Prepare our work environment and create our lab resources using a Terraform script.
 
 
-### Prerequisites
-
-* The following workshop requires an Oracle Public Cloud Account that will either be supplied by your instructor or can be obtained through **Getting Started** steps.
-* A Cloud tenancy is where you have the resources available to provision what is listed in the Architecture Overview.
-* Oracle Cloud Infrastructure supports the following browsers and versions: Google Chrome 69 or later, Safari 12.1 or later, and Firefox 62 or later.
-* Your cloud account user must have the required IAM (Identity and Access Management) policy or admin user.
-* Successfully logged in to your cloud tenancy, if not please [login](https://www.oracle.com/cloud/sign-in.html) into your cloud account.
-
 ## Task 1: Use Cloud Shell to clone the lab repository
 
-1. In the Oracle Cloud console global header, click Cloud Shell. Cloud Shell opens as a separate panel in the Oracle Cloud console, which you can expand to full screen.
+1. In the Oracle Cloud console global header, click **Cloud Shell**. Cloud Shell opens as a separate panel in the Oracle Cloud console, which you can expand to full screen.
 
   _**Note:** *It takes a few minutes for Cloud Shell to connect and load your session.*_
 
@@ -52,14 +28,17 @@ In this first lab, we will prepare our work environment and create our lab resou
 	```
 	<copy>
 	git clone https://github.com/smadhukumar/atp-to-kafka.git
-	cd atp-to-kafka
-	
-
 	</copy>
 	```
 
-	![Cloned directory in Cloud Shell Terminal.](images/git.png)
+3. Enter the following command to change directories:
 
+    ```
+	<copy>
+	cd atp-to-kafka
+	</copy>
+    ```
+    ![Cloned directory in Cloud Shell Terminal.](images/git.png)
 ## Task 2: Generate SSH keys
 
 1. In Cloud Shell, enter the following commands to add the execute permission to generate_pemkey.sh, and then run the file.
@@ -153,6 +132,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
-* **Contributors** -  Deniz Sendil, Database Product Management;Divya Kashyap DevOps and Infra Cloud Engineer, Bangalore, NAC
-* **Last Updated By/Date** - 
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
+* **Contributors** -  Denis Gray, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
+* **Last Updated By/Date** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration

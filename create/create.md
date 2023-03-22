@@ -2,19 +2,20 @@
 
 ## Introduction
 
-This lab walks you through the steps to create an Oracle Cloud Infrastructure (OCI) GoldenGate deployment.
+In this lab, you learn to create the source and target Oracle Cloud Infrastructure (OCI) GoldenGate deployments.
 
 Estimated Time: 5 minutes
 
-### About Oracle Cloud Infrastructure GoldenGate Deployments
+### About OCI GoldenGate deployments
 
-Oracle Cloud Infrastructure GoldenGate deployment manages the resources it requires to function. The GoldenGate deployment also lets you access the GoldenGate deployment console, where you can access the OCI GoldenGate deployment console to create and manage processes such as Extracts and Replicats.
+OCI GoldenGate deployments contain and manage the resources it requires to function. The GoldenGate deployment also lets you access the GoldenGate deployment console, where you can access the OCI GoldenGate deployment console to create and manage processes such as Extracts and Replicats.
 
 ### Objectives
 
 In this lab, you will:
 * Locate Oracle Cloud Infrastructure GoldenGate in the Console
-* Create an OCI GoldenGate deployment
+* Create the source deployment
+* Create the target deployment
 * Review the OCI GoldenGate deployment details
 * Access the OCI GoldenGate deployment console
 
@@ -24,31 +25,31 @@ This lab assumes that you completed all preceding labs.
 
 ## Task 1: Create the source deployment
 
-1.  Open the **Navigation Menu**, navigate to **Oracle Database**, and select **GoldenGate**.
+1.  Open the **Navigation Menu**, navigate to **Oracle Database**, and then select **GoldenGate**.
 
     ![GoldenGate in the Oracle Cloud navigation menu](images/database-goldengate.png " ")
 
-2.  On the GoldenGate **Overview** page, click **Create Deployment**.
+2.  On the GoldenGate **Overview** page, click **Create deployment**.
 
     ![Deployments page](images/create-deployment-select.png "")
 3.  You may need to select a compartment. Under List Scope, from the Compartment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
 
-4.  In the Create Deployment panel, enter **GGSDeployment** for Name.
+4.  In the Create Deployment panel, enter **SourceDeployment** for Name.
 
-5.  From the Compartment dropdown, select a compartment **LiveLabCompartment**.
+5.  From the Compartment dropdown, select **LiveLabCompartment**.
 
 6.  For OCPU Count, enter **1**.
 
-7.  For Subnet, select a subnet. If you're using the workshop environment, select the subnet as  **LiveLabWebSubnet**.
+7.  For Subnet, select a subnet. If you're using the workshop environment, select **LiveLabWebSubnet**.
 
 8.  For License type, select **Bring Your Own License (BYOL)**.
 
-9. Click **Show Advanced Options**, and then select **Create Public Endpoint**.
+9. Click **Show advanced Options**, and then select **Create public endpoint**.
 
     ![Completed Create GoldenGate Deployment fields](images/create-deployment-general-info.png " ")
 
 10. Click **Next**.
-11. Select a technology such as **Oracle Database**.
+11. For Select a technology, select **Oracle Database**.
 
 11. For GoldenGate Instance Name, enter **ggsource**.
 
@@ -56,15 +57,13 @@ This lab assumes that you completed all preceding labs.
 
 13. For Administrator Password, enter a password. Take note of this password.
 
->**Note:** This password needs to match password of a database user that we will use later. In order to make sure the password works for both, we suggest you enter a password containing only upper case letters, lower case letters, numbers, and underscores. If you are using the green button (run on LiveLabs tenancy), you can use your database admin password given to you on the reservation page.
+    > **Note:** *For the purposes of this LiveLab, you use the same passwords for the oggadmin user and the database user. To ensure the password works for both users, enter a password containing only upper case letters, lower case letters, numbers, and underscores. If using the green button version of this lab (running on LiveLabs sandbox), you can use the database admin password on the reservation page*.
 
 14. Click **Create**.
 
     ![Completed GoldenGate details](images/create-deployment-completed.png " ")
 
-> **Note:** *You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.*
-
-15. Deployment creation completed
+    > **Note:** *You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.*
 
     ![Deployment creation completed](images/deployment-active-status.png " ")
 
@@ -73,50 +72,50 @@ This lab assumes that you completed all preceding labs.
 1. Go back to the GoldenGate **Overview** page, click **Create Deployment**.
 
     ![Deployments page](images/create-deployment-select.png "")
-3.  You may need to select a compartment. Under List Scope, from the Compartment dropdown, expand the root compartment, and then select the compartment **LiveLabCompartment**.
 
-4.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
+2.  In the Create Deployment panel, enter **OCI GoldenGate Big Data** for Name.
 
-5.  From the Compartment dropdown, select a compartment.
+3.  From the Compartment dropdown, select **LiveLabCompartment**.
 
-6.  For OCPU Count, enter **1**.
+4.  For OCPU Count, enter **1**.
 
-7.  For Subnet, select a subnet. If you're using the workshop environment, select **LiveLabWebSubnet**.
+5.  For Subnet, select a subnet. If you're using the workshop environment, select **LiveLabWebSubnet**.
 
-8.  For License type, select **License included**.
-9.  Click **Show Advanced Options**, and then select **Create Public Endpoint**.
+6.  For License type, select **License included**.
+
+7.  Click **Show advanced options**, and then select **Create public endpoint**.
 
 
-9. Click **Next**.
+8. Click **Next**.
     ![Completed GoldenGate details](images/create-deployment-click.png " ")
 
-10. Select Technology as  **Big Data**.
+9. For Select a technology, select **Big Data**.
 
-11. For GoldenGate Instance Name, enter **OCIGGBigData**.
+10. For GoldenGate Instance Name, enter **OCIGGBigData**.
 
-12. For Administrator Username, enter **oggadmin**.
+11. For Administrator Username, enter **oggadmin**.
 
-13. For Administrator Password, enter a password. Take note of this password.
+12. For Administrator Password, enter a password. Take note of this password.
 
->**Note:** This password needs to match password of a database user that we will use later. In order to make sure the password works for both, we suggest you enter a password containing only upper case letters, lower case letters, numbers, and underscores. If you are using the green button (run on LiveLabs tenancy), you can use your database admin password given to you on the reservation page.
+    > **Note:** *For the purposes of this LiveLab, you use the same passwords for the oggadmin user and the database user. To ensure the password works for both users, enter a password containing only upper case letters, lower case letters, numbers, and underscores. If using the green button version of this lab (running on LiveLabs sandbox), you can use the database admin password on the reservation page.*
 
-14. Click **Create**.
+13. Click **Create**.
 
-    ![Completed GoldenGate details](images/create-deployment-create.png " ")
+    ![Completed GoldenGate details](images/ggbd-deployment-create.png " ")
 
-> **Note:** *You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.*
+    >**Note:** *You're brought to the Deployment Details page. It takes a few minutes for the deployment to be created. Its status will change from CREATING to ACTIVE when it is ready for you to use.*
 
-15. Deployment creation completed
 
     ![Deployment creation completed](images/deployment-lanch-kafka.png " ")
+
 You may now **proceed to the next lab**.
 
 ## Learn More
 
-* [Managing Deployments](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/deployments.html)
+* [Managing deployments](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/deployments.html)
 
 ## Acknowledgements
-* **Author** - Jenny Chan, Consulting User Assistance Developer, Database User Assistance
-* **Contributors** -  Denis Gray, Database Product Management; Madhu Kumar S, AppDev and Integration
-* **Last Updated By/Date** - 
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
+* **Contributors** -  Denis Gray, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
+* **Last Updated By/Date** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
 
