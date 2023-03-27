@@ -1,21 +1,22 @@
-# Create a source ATP schema and add trandata
+# Add and run the Extract
 
 ## Introduction
 
-This lab walks you through the steps to create and run an Extract in the Oracle Cloud Infrastructure (OCI) GoldenGate Deployment Console.
+In this lab, you learn to add Transaction information (TRANDATA) and then add and run the Extract process in the source OCI GoldenGate deployment console.
 
 Estimated time: 15 minutes
 
-### About Trandata 
+### About Transaction information 
 
-Use ADD TRANDATA to enable Oracle GoldenGate to acquire the transaction information that it needs from the transaction records.
+Adding Transaction information (TRANDATA) allows Oracle GoldenGate to collect the information it needs from database transaction records.
 
 
 ### Objectives
 
 In this lab, you will:
-* Log in to the OCI GoldenGate deployment console
-* Add transaction data and a checkpoint table
+* Launch the OCI GoldenGate deployment console and log in
+* Add transaction information
+* Add and run an Extract
 
 
 ### Prerequisites
@@ -23,138 +24,7 @@ In this lab, you will:
 This lab assumes that you completed all preceding labs, and your deployment is in the Active state.
 
 
-## Task 1: Create a source ATP schema
-
-1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
-
-    ![Select your Autonomous Database instance](./images/atp-source-page.png " ")
-
-2.  Click on  **Database actions**.
-
-    ![DB Actions log in page](./images/atp-db-options.png " ")
-
-3.  From the Database Actions menu, under **Development**, select **SQL**.
-
-    ![Database Actions page](./images/db-actions.png " ")
-
-4.  (Optional) Click **X** to close the Help dialog.
-
-5.  Copy the SQL query and paste it into the SQL Worksheet. Click **Run Script**. The Script Output tab displays confirmation messages.
-
-    ```
-    <copy>
-    CREATE USER "SRC_OCIGGLL" IDENTIFIED BY "#OCIGGSr0ck5*";
-    GRANT CREATE SESSION TO "SRC_OCIGGLL";
-    ALTER USER "SRC_OCIGGLL" ACCOUNT UNLOCK;
-    GRANT CONNECT, RESOURCE, DWROLE  TO "SRC_OCIGGLL";
-    GRANT UNLIMITED TABLESPACE TO "SRC_OCIGGLL";
-    BEGIN
-        ORDS.ENABLE_SCHEMA(p_enabled => TRUE,
-                        p_schema => 'SRC_OCIGGLL',
-                        p_url_mapping_type => 'BASE_PATH',
-                        p_url_mapping_pattern => 'SRC_OCIGGLL',
-                        p_auto_rest_auth => FALSE);
-        commit;
-    END;
-    /
-   </copy>
-    ```
-
-    ![ Pasted script in SQL Worksheet](./images/atp-sql.png " ")
-
-
-
-6. Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
-   
-    ```
-    <copy>
-    --------------------------------------------------------
-    --  DDL for Table SRC_CITY
-    --------------------------------------------------------
-    CREATE TABLE "SRC_OCIGGLL"."SRC_CITY" 
-    (   "CITY_ID" NUMBER(10,0), 
-        "CITY" VARCHAR2(50 BYTE), 
-        "REGION_ID" NUMBER(10,0), 
-        "POPULATION" NUMBER(10,0)
-    ) ;
-    --------------------------------------------------------
-    --  DDL for Table SRC_CUSTOMER
-    --------------------------------------------------------
-    CREATE TABLE "SRC_OCIGGLL"."SRC_CUSTOMER" 
-    (	"CUSTID" NUMBER(10,0), 
-        "DEAR" NUMBER(1,0), 
-        "LAST_NAME" VARCHAR2(50 BYTE), 
-        "FIRST_NAME" VARCHAR2(50 BYTE), 
-        "ADDRESS" VARCHAR2(100 BYTE), 
-        "CITY_ID" NUMBER(10,0), 
-        "PHONE" VARCHAR2(50 BYTE), 
-        "AGE" NUMBER(3,0), 
-        "SALES_PERS_ID" NUMBER(10,0)
-    ) ;
-    --------------------------------------------------------
-    --  DDL for Table SRC_ORDERS
-    --------------------------------------------------------
-
-    CREATE TABLE "SRC_OCIGGLL"."SRC_ORDERS" 
-    (   "ORDER_ID" NUMBER(10,0), 
-        "STATUS" VARCHAR2(3 BYTE), 
-        "CUST_ID" NUMBER(10,0), 
-        "ORDER_DATE" DATE, 
-        "CUSTOMER" VARCHAR2(35 BYTE)
-    ) ;
-    --------------------------------------------------------
-    --  DDL for Table SRC_ORDER_LINES
-    --------------------------------------------------------
-
-    CREATE TABLE "SRC_OCIGGLL"."SRC_ORDER_LINES" 
-    (   "ORDER_ID" NUMBER(10,0), 
-        "LORDER_ID" NUMBER(10,0), 
-        "PRODUCT_ID" NUMBER(10,0), 
-        "QTY" NUMBER(10,0), 
-        "AMOUNT" NUMBER(10,2)
-    ) ;
-    --------------------------------------------------------
-    --  DDL for Table SRC_PRODUCT
-    --------------------------------------------------------
-
-    CREATE TABLE "SRC_OCIGGLL"."SRC_PRODUCT" 
-    (   "PRODUCT_ID" NUMBER(10,0), 
-        "PRODUCT" VARCHAR2(50 BYTE), 
-        "PRICE" NUMBER(10,2), 
-        "FAMILY_NAME" VARCHAR2(50 BYTE)
-    );
-    -------------------------------------------------------
-     --  DDL for Table SRC_REGION
-    --------------------------------------------------------
-
-    CREATE TABLE "SRC_OCIGGLL"."SRC_REGION" 
-    (   "REGION_ID" NUMBER(10,0), 
-        "REGION" VARCHAR2(50 BYTE), 
-        "COUNTRY_ID" NUMBER(10,0), 
-        "COUNTRY" VARCHAR2(50 BYTE)
-    ) ;
-    </copy>
-    ```
-    ![ Pasted schema script in SQL Worksheet](./images/table-creation-completed.png " ")
-
->**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
-
-7. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
-
-    ![Displays the SRC\_OCIGGLL tables](./images/table-details.PNG " ")
-
-8. To **enable supplemental logging**, run the following command:
-
-    ```
-    <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
-    ```
-9. Run the **alter user** command to unlock the ***ggadmin*** user and set the password for it.
-
-    ```
-    <copy>alter user ggadmin identified by Or4cl3--2022 account unlock;</copy>
-    ```
-
-## Task 2: Add trandata 
+## Task 1: Add transaction information
 
 1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
 
@@ -196,6 +66,75 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 
 To return to the GoldenGate Deployment Console Home page, click **Overview** in the left navigation.
+## Task 1: Add and Run an Extract
+
+1.  On the GoldenGate Deployment Console Home page, click **Add Extract** (plus icon).
+
+    ![Click Add Extract](images/add-extract.png " ")
+
+2.  On the Add Extract page, select **Integrated Extract**, and then click **Next**.
+
+    ![Add Extract page with Integrated Extract highlighted](images/select-integratre-extract.png " ")
+
+3.  For **Process Name**, enter UAEXT.
+
+4.  For **Trail Name**, enter E1.
+
+    ![Add Extract - Basic Information](images/extract-name.png " ")
+
+5.  Under **Source Database Credential**, for **Credential Domain**, select **OracleGoldenGate**.
+
+6.  For **Credential Alias**, select the **ATP_Source**.
+
+    ![Add Extract - Source Database Credential](images/credential-store-select.png " ")
+
+7.  Under Managed Options, enable **Critical to deployment health**.
+
+    ![Critical to deployment health highlighted](images/critical-to-deployment-health.png " ")
+
+8.  Click **Next**.
+
+9.  On the Parameter File page, in the text area, add a new line to the existing text and add the following:
+
+    ```
+    <copy>-- Capture DDL operations for listed schema tables
+    ddl include mapped
+
+    -- Add step-by-step history of ddl operations captured
+    -- to the report file. Very useful when troubleshooting.
+    ddloptions report
+
+    -- Write capture stats per table to the report file daily.
+    report at 00:01
+
+    -- Rollover the report file weekly. Useful when IE runs
+    -- without being stopped/started for long periods of time to
+    -- keep the report files from becoming too large.
+    reportrollover at 00:01 on Sunday
+
+    -- Report total operations captured, and operations per second
+    -- every 10 minutes.
+    reportcount every 10 minutes, rate
+
+    -- Table list for capture
+    table SRC_OCIGGLL.*;</copy>
+    ```
+
+    ![extract create and run](images/extract-create-and-run.png " ")
+
+10. Click **Create**. You're returned to the OCI GoldenGate Deployment Console Home page.
+
+11. In the UAEXT **Actions** menu, select **Start**. In the Confirm Action dialog, click **OK**.
+
+    ![Start Extract](images/start-extract.png)
+
+    The yellow exclamation point icon changes to a green checkmark.
+
+    ![Extract started](images/green-extract-status.png)
+
+
+You may now **proceed to the next lab**.
+
 
 ## Learn more
 

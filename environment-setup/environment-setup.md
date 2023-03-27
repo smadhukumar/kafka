@@ -126,6 +126,137 @@ Needs to add screenshot *(Add a screenshot here of the Oracle Cloud global heade
 
 	![Copy and save output results.](images/zoom-terraform-output.png)
 
+## Task 5: Create a source ATP schema
+
+1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
+
+    ![Select your Autonomous Database instance](./images/adw-home.png " ")
+
+2.  Click on  **Database actions**.
+
+    ![DB Actions log in page](./images/atp-db-options.png " ")
+
+3.  From the Database Actions menu, under **Development**, select **SQL**.
+
+    ![Database Actions page](./images/db-actions.png " ")
+
+4.  (Optional) Click **X** to close the Help dialog.
+
+5.  Copy the SQL query and paste it into the SQL Worksheet. Click **Run Script**. The Script Output tab displays confirmation messages.
+
+    ```
+    <copy>
+    CREATE USER "SRC_OCIGGLL" IDENTIFIED BY "#OCIGGSr0ck5*";
+    GRANT CREATE SESSION TO "SRC_OCIGGLL";
+    ALTER USER "SRC_OCIGGLL" ACCOUNT UNLOCK;
+    GRANT CONNECT, RESOURCE, DWROLE  TO "SRC_OCIGGLL";
+    GRANT UNLIMITED TABLESPACE TO "SRC_OCIGGLL";
+    BEGIN
+        ORDS.ENABLE_SCHEMA(p_enabled => TRUE,
+                        p_schema => 'SRC_OCIGGLL',
+                        p_url_mapping_type => 'BASE_PATH',
+                        p_url_mapping_pattern => 'SRC_OCIGGLL',
+                        p_auto_rest_auth => FALSE);
+        commit;
+    END;
+    /
+   </copy>
+    ```
+
+    ![ Pasted script in SQL Worksheet](./images/atp-sql.png " ")
+
+
+
+6. Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
+   
+    ```
+    <copy>
+    --------------------------------------------------------
+    --  DDL for Table SRC_CITY
+    --------------------------------------------------------
+    CREATE TABLE "SRC_OCIGGLL"."SRC_CITY" 
+    (   "CITY_ID" NUMBER(10,0), 
+        "CITY" VARCHAR2(50 BYTE), 
+        "REGION_ID" NUMBER(10,0), 
+        "POPULATION" NUMBER(10,0)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_CUSTOMER
+    --------------------------------------------------------
+    CREATE TABLE "SRC_OCIGGLL"."SRC_CUSTOMER" 
+    (	"CUSTID" NUMBER(10,0), 
+        "DEAR" NUMBER(1,0), 
+        "LAST_NAME" VARCHAR2(50 BYTE), 
+        "FIRST_NAME" VARCHAR2(50 BYTE), 
+        "ADDRESS" VARCHAR2(100 BYTE), 
+        "CITY_ID" NUMBER(10,0), 
+        "PHONE" VARCHAR2(50 BYTE), 
+        "AGE" NUMBER(3,0), 
+        "SALES_PERS_ID" NUMBER(10,0)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_ORDERS
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_ORDERS" 
+    (   "ORDER_ID" NUMBER(10,0), 
+        "STATUS" VARCHAR2(3 BYTE), 
+        "CUST_ID" NUMBER(10,0), 
+        "ORDER_DATE" DATE, 
+        "CUSTOMER" VARCHAR2(35 BYTE)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_ORDER_LINES
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_ORDER_LINES" 
+    (   "ORDER_ID" NUMBER(10,0), 
+        "LORDER_ID" NUMBER(10,0), 
+        "PRODUCT_ID" NUMBER(10,0), 
+        "QTY" NUMBER(10,0), 
+        "AMOUNT" NUMBER(10,2)
+    ) ;
+    --------------------------------------------------------
+    --  DDL for Table SRC_PRODUCT
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_PRODUCT" 
+    (   "PRODUCT_ID" NUMBER(10,0), 
+        "PRODUCT" VARCHAR2(50 BYTE), 
+        "PRICE" NUMBER(10,2), 
+        "FAMILY_NAME" VARCHAR2(50 BYTE)
+    );
+    -------------------------------------------------------
+     --  DDL for Table SRC_REGION
+    --------------------------------------------------------
+
+    CREATE TABLE "SRC_OCIGGLL"."SRC_REGION" 
+    (   "REGION_ID" NUMBER(10,0), 
+        "REGION" VARCHAR2(50 BYTE), 
+        "COUNTRY_ID" NUMBER(10,0), 
+        "COUNTRY" VARCHAR2(50 BYTE)
+    ) ;
+    </copy>
+    ```
+    ![ Pasted schema script in SQL Worksheet](./images/table-creation-completed.png " ")
+
+>**Note:** *If you find that running the entire script does not create the tables, then try running each table creation statement one at a time until all the tables are created.*
+
+7. In the Navigator tab, look for the **SRC\_OCIGGLL** schema and then select tables from their respective dropdowns to verify the schema and tables were created. You may need to log out and log back in if you can't locate **SRC\_OCIGGLL**.
+
+    ![Displays the SRC\_OCIGGLL tables](./images/table-details.PNG " ")
+
+8. To **enable supplemental logging**, run the following command:
+
+    ```
+    <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
+    ```
+9. Run the **alter user** command to unlock the ***ggadmin*** user and set the password for it.
+
+    ```
+    <copy>alter user ggadmin identified by Or4cl3--2022 account unlock;</copy>
+    ```
+
 You may now **proceed to the next lab**.
 
 

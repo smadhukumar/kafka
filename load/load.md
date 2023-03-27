@@ -1,87 +1,52 @@
-# Load the data to ATP
+# Verify the replication process
 
 ## Introduction
 
-This lab walks you through the steps to create and run an Extract in the Oracle Cloud Infrastructure (OCI) GoldenGate Deployment Console.
+In this lab, you learn to view the Extract and Replicat details and then add data to the ATP schema to verify the replication process runs as expected.
 
-Estimated Time: 15 minutes
-
-### About Trandata 
-
-Use ADD TRANDATA to enable Oracle GoldenGate to acquire the transaction information that it needs from the transaction records.
-
+Estimated time: 15 minutes
 
 ### Objectives
 
-In this lab, you will:
-* Log in to the OCI GoldenGate deployment console
-* Add transaction data and a checkpoint table
+In this lab, you:
+* View the Extract details in the source deployment console
+* View the Replicate details in the target deployment console
+* Add data to the source database
+* Review the Extract and Replicat details to verify replication
+* (Optional) View the Kafka topic content
 
 
 ### Prerequisites
 
 This lab assumes that you completed all preceding labs, and your deployment is in the Active state.
 
-## Task 1: Statistics of the extract and replicat before loading the data to ATP.
+## Task 1: View the Extract and Replicat details.
 
-1.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
-
-2.  On the Deployments page, select **GGSDeployment**.
-
-3.  On the Deployment Details page, click **Launch Console**.
-
-    ![Deployment Details page](images/ggsdeployment-lanuch.png " ")
-
-4.  On the OCI GoldenGate Deployment Console sign-in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
-
-    ![OCI GoldenGate Deployment Console Sign In](images/ggs-login-page.png " ")
-
-    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
-
-5. Click on the extract name ***UAEXT*** and Navigate to **Statistics** tab. Verify there will be **no transaction statistics** for any tables.
+1. In the source **OCI GoldenGate deployment console (ggsource)**, on the Administration Service Overview page, click **UAEXT** to view its details.
+2. On the **UAEXT (Integrated)** page, click **Statistics**. Verify that there are zero (0) transaction statistics in the table.
      ![Extract click on replicat](images/click-on-replicat.png " ")
-     ![Extract statistics](images/extract-statatics-pre-status.png " ")   
-
-
-6.  Use the Oracle Cloud Console navigation menu to navigate back to GoldenGate.
-
-7.  On the Deployments page, select **OCI GoldenGate Big Data**.
-
-3.  On the Deployment Details page, click **Launch Console**.
-
-    ![Deployment GGBD  Details page](images/ggbd-launchconsole.png " ")
-
-4.  On the OCI GoldenGate Deployment Console sign-in page, enter **oggadmin** for User Name and the password you provided when you created the deployment, and then click **Sign In**.
-
-    ![OCI GoldenGate Deployment Console Sign In](images/ggs-login-page.png " ")
-
-    You're brought to the OCI GoldenGate Deployment Console Home page after successfully signing in.
-
-5. Click on Replicat name ***kafkaRep*** and Navigate to **Statistics** tab. Verify that **each table** will have ***5*** inserts.
+     ![Extract statistics](images/extract-statatics-pre-status.png " ") 
+3. In the target OCI GoldenGate for Big Data deployment console (OCIGGBD), on the Administration Service Overview page, click KAFKAREP to view its details.
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-pre-stats.png " ")
+4. On the KAFKAREP (CLASSIC APPLY) page, click **Statistics**. Verify that there are no records displayed.
 
-   
+## Task 2: Load data into the source database
 
-
-
-## Task 2: Load a data to source ATP schema
-
-1.  In the OCI Console, select your ATP instance from the Autonomous Databases page to view its details and access tools.
+1. In the Oracle Cloud console, open the navigation menu, click **Oracle Database**, and then click **Autonomous Transaction Processing**.
+2. On the Autonomous Transaction Processing page, select the ATP_Source database to view its details.
 
     ![Select your Autonomous Database instance](./images/atp-source-page.png " ")
 
-2.  Click on  **Database actions**.
-
+3. On the ATP_Source database details page, click **Database actions**.
     ![DB Actions log in page](./images/atp-db-options.png " ")
 
-3.  From the Database Actions menu, under **Development**, select **SQL**.
+4. On the Database actions page, in the **Development**, click **SQL**.
 
     ![Database Actions page](./images/db-actions.png " ")
+_**Note**_: If you're not automatically logged in to SQL, use the ATP database credentials to log in
 
-4.  (Optional) Click **X** to close the Help dialog.
-
-5.  Copy the SQL query and paste it into the **SQL** Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
+5.  Copy the SQL query and paste it into the **SQL Worksheet**. Click **Run Script**. The Script Output tab displays confirmation messages.
 
     ```
     <copy>
@@ -111,17 +76,18 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 ## Task 3: Statistics of the extract and replicat, post data loading to the ATP.
 
-1. Switch back to OCI GoldenGate Oracle deployment ***GGSDeployment***. Click on the extract name ***UAEXT*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
+1. In the source **OCI GoldenGate deployment console (ggsource)**, click **UAEXT** to view its details.
+2. On the UAEXT (Integrated) page, click **Statistics**, and then verify that each row displays **3 inserts**.
     ![OCI GoldenGate Oracle deployment Home Page](images/extract-home.png " ") 
     ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
-2. Switch back to OCI GoldenGate Big Data deployment ***OCIGGBigData***.Click on the replicat name ***KAFKAREP*** and Navigate to the **Statistics** tab. Verify that **each table** will have ***3*** inserts.
-
+3. In the target **OCI GoldenGate for Big Data deployment console (OCIGGBD)**, click ***KAFKAREP*** to view its details.
+4. On the KAFKAREP (CLASSIC APPLY) page, click **Statistics**, and then verify that each row displays **3 inserts**.
     ![OCI GoldenGate Big Data deployment Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deployment Home Page](images/replicat-post-stats.png " ")
     
 
-## Task 4 : (optional) List and view the content of the topic on the Kafka server.
+## Task 4 : (Optional) Verify the Kafka topic content.
 
 1. Open a Cloud Shell to log on to the Kafka server.
 
