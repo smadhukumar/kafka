@@ -78,7 +78,7 @@ _**Note**_: If you're not automatically logged in to SQL, use the ATP database c
 
 1. In the source **OCI GoldenGate deployment console (ggsource)**, click **EXTATP** to view its details.
 2. On the EXTATP (Integrated) page, click **Statistics**, and then verify that each row displays **3 inserts**.
-    ![OCI GoldenGate Oracle deployment Home Page](images/extract-home.png " ") 
+    ![OCI GoldenGate Oracle deployment Home Page](images/click-on-replicat.png " ") 
     ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
 3. In the target **OCI GoldenGate for Big Data deployment console (OCIGGBigData)**, click ***KAFKAREP*** to view its details.
@@ -113,3 +113,4 @@ _**Note**_: If you're not automatically logged in to SQL, use the ATP database c
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
 * **Contributors** -  Denis Gray, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
 * **Last Updated By/Date** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
+
