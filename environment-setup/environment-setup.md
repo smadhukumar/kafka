@@ -263,6 +263,7 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
+## Acknowledgements
 * **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
-* **Contributors** -  Denis Gray, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
+* **Contributors** -  Denis Sendil, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
 * **Last Updated By/Date** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration

@@ -102,6 +102,6 @@ You may now **proceed to the next lab**.
 * [Managing Deployments](https://docs.oracle.com/en/cloud/paas/goldengate-service/using/deployments.html)
 
 ## Acknowledgements
-* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration 
-* **Contributors** - Deniz Sendil, Database Product Management
-* **Last Updated By/Date** - 
+* **Author** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
+* **Contributors** -  Denis Sendil, Database Product Management; Jenny Chan, Consulting User Assistance Developer, Database User Assistance
+* **Last Updated By/Date** - Madhu Kumar S, Senior Solution Engineer, AppDev and Integration
