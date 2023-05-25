@@ -254,7 +254,7 @@ Needs to add screenshot *(Add a screenshot here of the Oracle Cloud global heade
 9. Run the **alter user** command to unlock the ***ggadmin*** user and set the password for it.
 
     ```
-    <copy>alter user ggadmin identified by Or4cl3--2022 account unlock;</copy>
+    <copy>alter user ggadmin identified by Or4cl3##2023 account unlock;</copy>
     ```
 
 You may now **proceed to the next lab**.

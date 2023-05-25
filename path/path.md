@@ -52,7 +52,7 @@ This lab assumes that you completed all preceding labs.
 2. On the Paths page, click **Add Path** (plus icon).
     ![Add a New Path](images/add-path-home.png " ")
 3. On the Add Path page, for **Name**, enter ***Dist_Path***.
-4. For **Source**, select ***UAEXT***.
+4. For **Source**, select ***EXTATP***.
 5. For **Trail Name**, enter ***E1***.
 6. For **Target Authentication Method**, select ***UserID Alias***.
 7. For **Target**, select ***WSS*** from the dropdown.
@@ -62,7 +62,7 @@ _**NOTE:**: You can also copy this from the OCI GoldenGate for Big Data deployme
 9. For **Port Number**, enter ***443***.
 10. For **Trail Name**, enter ***RT***.
 12. For **Domain**, enter the domain created in **Task 2, Step 2**. For example, ***Distribution***
-13. For **UserID**, enter the User ID created in **Task 2, Step 4**. For example, ***DistUser*** 
+13. For **UserID**, enter the User ID created in **Task 2, Step 4**. For example, ***ociggbd*** 
     ![Provide all the info to create a path](images/distribution-path-useridalias.png " ")
 14.	Click **Create & Run**.  You return to the Paths page. If successful, the Distribution Path changes from a yellow exclamation point to a green checkmark.
     ![Click on Create and Run button](images/distribution-path-submit.png " ")

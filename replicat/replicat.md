@@ -23,7 +23,7 @@ This lab assumes that you completed all preceding labs.
 
 ## Task 1: Add and run the Replicat
 
-1. The user should already be logged in to the OCI GoldenGate for Big Data deployment console. You can start this lab with, "In the OCI GoldenGate for Big Data (OCIGGBD) deployment console, click **Administration Service**. If you don't see Extracts and Replicats, open the navigation menu and click **Overview**."
+1. The user should already be logged in to the OCI GoldenGate for Big Data deployment console. You can start this lab with, "In the OCI GoldenGate for Big Data (OCIGGBigData) deployment console, click **Administration Service**. If you don't see Extracts and Replicats, open the navigation menu and click **Overview**."
 2. In the Replicats section, click **Add Replicat** (plus icon).
     ![add-replicat](images/add-replicat.png " ")
 3. On the Add Replicat page, for **Replicat Type**, select **Classic Replicat**, and then click **Next**.

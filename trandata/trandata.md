@@ -76,11 +76,9 @@ To return to the GoldenGate Deployment Console Home page, click **Overview** in 
 
     ![Add Extract page with Integrated Extract highlighted](images/select-integratre-extract.png " ")
 
-3.  For **Process Name**, enter UAEXT.
+3.  For **Process Name**, enter EXTATP.
 
-4.  For **Trail Name**, enter E1.
-
-    ![Add Extract - Basic Information](images/extract-name.png " ")
+4.  For **Trail Name**, enter AE.
 
 5.  Under **Source Database Credential**, for **Credential Domain**, select **OracleGoldenGate**.
 
@@ -90,9 +88,10 @@ To return to the GoldenGate Deployment Console Home page, click **Overview** in 
 
 7.  Under Managed Options, enable **Critical to deployment health**.
 
+8.  Click **Next**.
     ![Critical to deployment health highlighted](images/critical-to-deployment-health.png " ")
 
-8.  Click **Next**.
+
 
 9.  On the Parameter File page, in the text area, add a new line to the existing text and add the following:
 
@@ -124,7 +123,7 @@ To return to the GoldenGate Deployment Console Home page, click **Overview** in 
 
 10. Click **Create**. You're returned to the OCI GoldenGate Deployment Console Home page.
 
-11. In the UAEXT **Actions** menu, select **Start**. In the Confirm Action dialog, click **OK**.
+11. In the EXTATP **Actions** menu, select **Start**. In the Confirm Action dialog, click **OK**.
 
     ![Start Extract](images/start-extract.png)
 

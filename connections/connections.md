@@ -41,7 +41,7 @@ Follow these steps to create a connection to the source Autonomous Transaction P
 5.  For Type, select **Oracle Autonomous Database** and click **Next**.
     ![GoldenGate create connection creation page](images/oci-connection-choose.png " ")
 
-6.  For Database details, choose **Select database**, and then select the ATP database created in Lab 1. Enter ***ggadmin*** for Database username, and , ***Or4cl3--2022*** for password, and then click  **Create**.
+6.  For Database details, choose **Select database**, and then select the ATP database created in Lab 1. Enter ***ggadmin*** for Database username, and , ***Or4cl3##2023*** for password, and then click  **Create**.
     ![atp database connection created](images/create-atp-connection.png " ")
 
 

@@ -22,11 +22,11 @@ This lab assumes that you completed all preceding labs, and your deployment is i
 
 ## Task 1: View the Extract and Replicat details.
 
-1. In the source **OCI GoldenGate deployment console (ggsource)**, on the Administration Service Overview page, click **UAEXT** to view its details.
-2. On the **UAEXT (Integrated)** page, click **Statistics**. Verify that there are zero (0) transaction statistics in the table.
+1. In the source **OCI GoldenGate deployment console (ggsource)**, on the Administration Service Overview page, click **EXTATP** to view its details.
+2. On the **EXTATP (Integrated)** page, click **Statistics**. Verify that there are zero (0) transaction statistics in the table.
      ![Extract click on replicat](images/click-on-replicat.png " ")
      ![Extract statistics](images/extract-statatics-pre-status.png " ") 
-3. In the target OCI GoldenGate for Big Data deployment console (OCIGGBD), on the Administration Service Overview page, click KAFKAREP to view its details.
+3. In the target OCI GoldenGate for Big Data deployment console (OCIGGBigData), on the Administration Service Overview page, click KAFKAREP to view its details.
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deploymen Home Page](images/replicat-pre-stats.png " ")
 4. On the KAFKAREP (CLASSIC APPLY) page, click **Statistics**. Verify that there are no records displayed.
@@ -76,12 +76,12 @@ _**Note**_: If you're not automatically logged in to SQL, use the ATP database c
 
 ## Task 3: Statistics of the extract and replicat, post data loading to the ATP.
 
-1. In the source **OCI GoldenGate deployment console (ggsource)**, click **UAEXT** to view its details.
-2. On the UAEXT (Integrated) page, click **Statistics**, and then verify that each row displays **3 inserts**.
+1. In the source **OCI GoldenGate deployment console (ggsource)**, click **EXTATP** to view its details.
+2. On the EXTATP (Integrated) page, click **Statistics**, and then verify that each row displays **3 inserts**.
     ![OCI GoldenGate Oracle deployment Home Page](images/extract-home.png " ") 
     ![OCI ggs-statistics](images/extract-status-post.png " ")  
 
-3. In the target **OCI GoldenGate for Big Data deployment console (OCIGGBD)**, click ***KAFKAREP*** to view its details.
+3. In the target **OCI GoldenGate for Big Data deployment console (OCIGGBigData)**, click ***KAFKAREP*** to view its details.
 4. On the KAFKAREP (CLASSIC APPLY) page, click **Statistics**, and then verify that each row displays **3 inserts**.
     ![OCI GoldenGate Big Data deployment Home Page](images/replicat-home.png " ")
     ![OCI GoldenGate Big Data deployment Home Page](images/replicat-post-stats.png " ")
