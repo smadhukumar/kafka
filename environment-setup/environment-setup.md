@@ -259,8 +259,6 @@ Needs to add screenshot *(Add a screenshot here of the Oracle Cloud global heade
 
 You may now **proceed to the next lab**.
 
-
-
 ## Acknowledgements
 
 ## Acknowledgements
